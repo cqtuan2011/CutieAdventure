@@ -151,11 +151,17 @@ public class PlayerController : MonoBehaviour
 
     private void Jump()
     {
-        if (canJump || canWallJump)
+        if (canJump)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             
             amountOfJumpLeft--;
+        }
+
+        if (canWallJump)
+        {
+            //rb.velocity = new Vector2(-rb.velocity.x, jumpForce);S
+            rb.velocity = new Vector2(-movementInputDirection * movementSpeed, jumpForce);
         }
     }
 
@@ -201,7 +207,15 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void PlayerDie() // trigger in disappear animation
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Trap"))
+        {
+            PlayerDisappear();
+        }
+    }
+
+    public void PlayerDie() // trigger in disappear animation
     {
         Destroy(gameObject);
     }
@@ -209,6 +223,7 @@ public class PlayerController : MonoBehaviour
     public void PlayerDisappear()
     {
         anim.Play("Disappear");
+        GetComponent<Collider2D>().enabled = false;
         rb.bodyType = RigidbodyType2D.Static;
     }
 }

@@ -4,17 +4,26 @@ using UnityEngine;
 
 public class FallingPlatform : MonoBehaviour
 {
-    Rigidbody2D rb;
+    private Rigidbody2D rb;
+    private Animator anim;
 
     private void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();   
+        rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();    
     }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            rb.bodyType = RigidbodyType2D.Dynamic;
+            anim.SetTrigger("PlayerOn");
         }
+    }
+
+    private void Falling() // function called in the end of "PlayerOn" animation
+    {
+        anim.enabled = false;
+        rb.bodyType = RigidbodyType2D.Dynamic;
     }
 }

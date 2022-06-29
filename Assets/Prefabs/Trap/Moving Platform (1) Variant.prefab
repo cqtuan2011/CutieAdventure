@@ -67,6 +67,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grey Platform
       objectReference: {fileID: 0}
+    - target: {fileID: 7535605570478603950, guid: 0895ef16e2cd72342be9f258baa97caa,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7535605570478603950, guid: 0895ef16e2cd72342be9f258baa97caa,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7535605570833314784, guid: 0895ef16e2cd72342be9f258baa97caa,
         type: 3}
       propertyPath: m_Sprite
@@ -77,6 +87,21 @@ PrefabInstance:
         type: 3}
       propertyPath: movingSpeed
       value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7535605570833314791, guid: 0895ef16e2cd72342be9f258baa97caa,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7535605570833314791, guid: 0895ef16e2cd72342be9f258baa97caa,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 7535605571220545805, guid: 0895ef16e2cd72342be9f258baa97caa,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0895ef16e2cd72342be9f258baa97caa, type: 3}

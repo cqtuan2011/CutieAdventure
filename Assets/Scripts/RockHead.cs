@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using DG.Tweening;
+
 
 public class RockHead : MonoBehaviour
 {
@@ -10,10 +10,16 @@ public class RockHead : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private Transform leftWallPoint;
     [SerializeField] private Transform rightWallPoint;
-    [SerializeField] private Ease ease;
+    [SerializeField] private AnimationCurve curve;
 
     private Animator anim;
-    private Rigidbody2D rb;
+
+    public Transform[] wayPoints;
+    private int currentWaypointIndex = 0;
+    private Vector2 currentPos;
+    private Vector2 targetPos;
+    
+    private float elapsedTimer;
 
     public bool leftWallChecked;
     public bool rightWallChecked;
@@ -21,26 +27,41 @@ public class RockHead : MonoBehaviour
     private void Awake()
     {
         anim = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody2D>();
     }
-    void Start()
+    private void Start()
     {
-        Move();
+        currentPos = wayPoints[currentWaypointIndex].position;
+        targetPos = wayPoints[currentWaypointIndex + 1].position;
     }
 
     private void Update()
     {
+        Move();
         WallCheckHit();
         UpdateAnimation();
     }
 
     private void Move()
     {
-        Sequence sequence = DOTween.Sequence();
+        elapsedTimer += Time.deltaTime;
 
-        sequence.Append(transform.DOMove(new Vector3(-15, -5, 0), movingDuration).SetEase(ease))
-            .Append(transform.DOMove(new Vector3(-30, -5, 0), movingDuration).SetEase(ease));
-        sequence.SetLoops(-1, LoopType.Restart);
+        float percentageComplete = elapsedTimer / movingDuration;
+
+        if (Vector2.Distance(transform.position, targetPos) < .2f)
+        {
+            currentPos = targetPos;
+            targetPos = wayPoints[currentWaypointIndex].position;
+        }
+
+        transform.position = Vector2.Lerp(currentPos, targetPos, curve.Evaluate(percentageComplete));
+
+        //transform.position = Vector2.MoveTowards(transform.position, waypoints[currentWaypointIndex].position, curve.Evaluate());
+    }
+
+    private void UpdatePosition()
+    {
+        currentPos = wayPoints[currentWaypointIndex].position;
+        targetPos = wayPoints[currentWaypointIndex + 1].position;
     }
 
     private void UpdateAnimation()

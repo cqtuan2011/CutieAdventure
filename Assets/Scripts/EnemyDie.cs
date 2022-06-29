@@ -30,6 +30,9 @@ public class EnemyDie : MonoBehaviour
             isHit = true;
 
             DisableZigzagMovement();
+            DisablePatrolling();
+            DisableWaypointFollower();
+            DisableEnemyShootingBehaviour();
         }
     }
 
@@ -40,4 +43,28 @@ public class EnemyDie : MonoBehaviour
             GetComponent<ZigzagMovement>().enabled = false;
         }
     } 
+
+    private void DisablePatrolling()
+    {
+        if (GetComponent<EnemyPatrolling>() != null)
+        {
+            GetComponent<EnemyPatrolling>().enabled = false;
+        }
+    }
+
+    private void DisableEnemyShootingBehaviour()
+    {
+        if (GetComponent <EnemyShootingBehaviour>() != null)
+        {
+            GetComponent<EnemyShootingBehaviour>().enabled = false;
+        }
+    }
+
+    private void DisableWaypointFollower()
+    {
+        if (GetComponent<WaypointFollower>() != null)
+        {
+            GetComponent <WaypointFollower>().enabled = false;
+        }
+    }
 }

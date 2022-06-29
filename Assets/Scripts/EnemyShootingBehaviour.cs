@@ -11,6 +11,12 @@ public class EnemyShootingBehaviour : MonoBehaviour
     private AIOverlapDetector detector;
     private Animator anim;
 
+    //private delegate void OnFacingPlayer();
+    //private OnFacingPlayer onFacingPlayer;
+
+    [SerializeField] private bool trunkMode;
+    [SerializeField] private Transform playerToFollow;
+
     private void Awake()
     {
         detector = GetComponent<AIOverlapDetector>();
@@ -25,6 +31,7 @@ public class EnemyShootingBehaviour : MonoBehaviour
     void UpdateAnimation()
     {
         anim.SetBool("playerInArea", detector.playerInArea);
+        TrunkMode();
     }
 
     void Shoot() // Call by the event in Attack animation
@@ -43,5 +50,37 @@ public class EnemyShootingBehaviour : MonoBehaviour
         GameObject newBullet =  Instantiate(bullet, firePoint.position, Quaternion.identity);
 
         newBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(shootSpeed * direction(), 0f);
+    }
+
+    private void TrunkMode()
+    {
+        if (trunkMode && detector.playerInArea)
+        {
+            GetComponent<WaypointFollower>().enabled = false;
+
+            //onFacingPlayer += FacingPlayerDirection;
+            //onFacingPlayer();
+
+            FacingPlayerDirection();
+        } else
+        {
+            if (GetComponent<WaypointFollower>() != null)
+            {
+                GetComponent<WaypointFollower>().enabled = true;
+                //onFacingPlayer -= FacingPlayerDirection;
+            }
+        }
+    }
+
+    private void FacingPlayerDirection()
+    {
+        Vector3 scale = transform.localScale;
+        if (transform.position.x < playerToFollow.position.x)
+        {
+            scale.x = -1;
+        }
+        else scale.x = 1;
+
+        transform.localScale = scale;
     }
 }

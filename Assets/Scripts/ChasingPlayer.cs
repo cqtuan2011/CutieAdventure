@@ -59,17 +59,8 @@ public class ChasingPlayer : MonoBehaviour
             GetComponent<EnemyPatrolling>().enabled = false;
             CheckDirection();
             transform.position = Vector2.MoveTowards(transform.position, playerPos, enemyChasingSpeed * Time.deltaTime);
-            if (detector.playerInHitArea)
-            {
-                isMoving = false;
-                anim.SetTrigger("Attack");
-                enemyChasingSpeed = 0;
-            }
-            else
-            {
-                isMoving = true;
-                enemyChasingSpeed = 2;
-            }
+            isMoving = true;
+            CheckPlayerInHitArea();
         }
         else
         {
@@ -81,5 +72,19 @@ public class ChasingPlayer : MonoBehaviour
     private void UpdatePlayerPosition()// this function will avoid enemy from flying up (only for ground-type enemy)
     {
         playerPos = new Vector3(playerToFollow.position.x, transform.position.y, 0);
+    }
+
+    private void CheckPlayerInHitArea()
+    {
+        if (detector.playerInHitArea)
+        {
+            isMoving = false;
+            anim.SetTrigger("Attack");
+            enemyChasingSpeed = 0;
+        }
+        else
+        {
+            isMoving = true;
+        }
     }
 }

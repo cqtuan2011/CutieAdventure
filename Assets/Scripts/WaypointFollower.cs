@@ -4,7 +4,7 @@ public class WaypointFollower : MonoBehaviour
 {
     [SerializeField] private GameObject[] wayPoints;
     [SerializeField] private float movingSpeed = 2f;
-    [SerializeField] private bool enemyMode;
+    [SerializeField] private bool enemyModeFlip;
 
     private int currentWaypointIndex = 0;
 
@@ -25,7 +25,7 @@ public class WaypointFollower : MonoBehaviour
             }
         }
 
-        if (enemyMode) // to flip enemy to the right direction
+        if (enemyModeFlip) // to flip enemy to the right direction
         {
             Flip();
         }

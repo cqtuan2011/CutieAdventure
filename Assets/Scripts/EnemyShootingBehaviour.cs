@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyShootingBehaviour : MonoBehaviour
 {
+    [SerializeField] private ShootingType shootingType;
+
     [SerializeField] float shootSpeed;
     [SerializeField] GameObject bullet;
     [SerializeField] Transform firePoint;
@@ -14,7 +16,6 @@ public class EnemyShootingBehaviour : MonoBehaviour
     //private delegate void OnFacingPlayer();
     //private OnFacingPlayer onFacingPlayer;
 
-    [SerializeField] private bool trunkMode;
     [SerializeField] private Transform playerToFollow;
 
     private void Awake()
@@ -49,12 +50,18 @@ public class EnemyShootingBehaviour : MonoBehaviour
         }
         GameObject newBullet =  Instantiate(bullet, firePoint.position, Quaternion.identity);
 
-        newBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(shootSpeed * direction(), 0f);
+        if (shootingType == ShootingType.Horizontal)
+        {
+            newBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(shootSpeed * direction(), 0f);
+        } else
+        {
+            newBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, -shootSpeed);
+        }
     }
 
     private void TrunkMode()
     {
-        if (trunkMode && detector.playerInArea)
+        if (shootingType == ShootingType.Horizontal && detector.playerInArea)
         {
             GetComponent<WaypointFollower>().enabled = false;
 
@@ -82,5 +89,11 @@ public class EnemyShootingBehaviour : MonoBehaviour
         else scale.x = 1;
 
         transform.localScale = scale;
+    }
+
+    private enum ShootingType
+    {
+        Horizontal,
+        Vertical,
     }
 }

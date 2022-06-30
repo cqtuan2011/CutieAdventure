@@ -181,8 +181,8 @@ MonoBehaviour:
   wayPoints:
   - {fileID: 8007840420900470582}
   - {fileID: 8007840419966798130}
-  movingSpeed: 2
-  enemyMode: 1
+  movingSpeed: 2.5
+  enemyModeFlip: 1
 --- !u!114 &8007840418879171466
 MonoBehaviour:
   m_ObjectHideFlags: 0

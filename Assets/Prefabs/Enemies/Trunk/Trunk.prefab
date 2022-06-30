@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3545664551142956501}
   - component: {fileID: 3545664551142956490}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Dangerous Zone
   m_TagString: Trap
   m_Icon: {fileID: 0}
@@ -129,7 +129,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3545664551905953674}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fire Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -203,7 +203,7 @@ GameObject:
   - component: {fileID: 3545664552746811779}
   - component: {fileID: 3545664552746811776}
   - component: {fileID: 3545664552746811777}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Trunk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -367,8 +367,8 @@ MonoBehaviour:
   wayPoints:
   - {fileID: 3545664551838873203}
   - {fileID: 3545664551652933969}
-  movingSpeed: 2
-  enemyMode: 1
+  movingSpeed: 1.8
+  enemyModeFlip: 1
 --- !u!114 &3545664552746811791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -383,7 +383,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMoving: 0
   enemyMoveDuration: 5
-  enemyIdleDuration: 3
+  enemyIdleDuration: 5
 --- !u!114 &3545664552746811779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -421,10 +421,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5c5cc2f44ee6704caa11ac8d1bfd5f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shootingType: 0
   shootSpeed: 7
   bullet: {fileID: 4705912094333836390, guid: 160e3754955dc3840a323dc2a08fbc09, type: 3}
   firePoint: {fileID: 3545664551905953674}
-  trunkMode: 1
   playerToFollow: {fileID: 0}
 --- !u!114 &3545664552746811777
 MonoBehaviour:

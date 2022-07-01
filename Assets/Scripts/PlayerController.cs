@@ -5,37 +5,50 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    private float movementInputDirection;
-
-    private int amountOfJumpLeft;
-
-    private bool isFacingRight = true;
-    private bool isRunning;
-    private bool isGrounded;
-    private bool isTouchingWall;
-    private bool isWallSliding;
-    private bool canJump;
-    private bool canWallJump;
-    public bool isTouchingRockHead;
-
-    public int amountOfJump = 1;
-
     private Rigidbody2D rb;
     private Animator anim;
 
+    [Header("For Movement")]
     [SerializeField] private float movementSpeed;
-    [SerializeField] private float jumpForce;
-    [SerializeField] private float pushForce;
-    [SerializeField] private float groundCheckRadius;
-    [SerializeField] private float wallCheckDistance;
-    [SerializeField] private float wallSlidingSpeed;
+    private float movementInputDirection;
+    private bool isFacingRight = true;
+    private bool isRunning;
 
+    [Space(10)]
+
+
+    [Header("For Jumping")]
+    [SerializeField] private int amountOfJump = 1;
+    [SerializeField] private float jumpForce;
     [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private float groundCheckRadius;
+    [SerializeField] private Transform groundCheck;
+    private int amountOfJumpLeft;
+    private bool isGrounded;
+    private bool canJump;
+
+    [Space(10)]
+
+    [Header("For Wall Sliding")]
+    [SerializeField] private float wallSlidingSpeed;
+    [SerializeField] private float wallCheckDistance;
+    [SerializeField] private Transform wallCheck;
+    private bool isTouchingWall;
+    private bool isWallSliding;
+
+    [Space(10)]
+
+    [Header("For Wall Jumping")]
+    [SerializeField] private float wallJumpForce;
+    [SerializeField] private float wallJumpDirection;
+    private bool canWallJump;
+
+    [Space(10)]
+
+    [Header("For Particle Effects")]
     [SerializeField] private ParticleSystem runningDust;
     [SerializeField] private ParticleSystem wallSlidingDust;
 
-    public Transform groundCheck;
-    public Transform wallCheck;
 
     private void Awake()
     {

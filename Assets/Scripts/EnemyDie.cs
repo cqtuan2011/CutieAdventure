@@ -8,6 +8,7 @@ public class EnemyDie : MonoBehaviour
     private Animator anim;
 
     [SerializeField] private float fallingSpeed;
+    [SerializeField] private float bouciness = 12f;
 
     private void Awake()
     {
@@ -26,6 +27,9 @@ public class EnemyDie : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            var playerRb = collision.GetComponent<Rigidbody2D>();
+            playerRb.velocity = new Vector2(playerRb.velocity.x, bouciness);
+
             anim.Play("Hit");
             isHit = true;
 

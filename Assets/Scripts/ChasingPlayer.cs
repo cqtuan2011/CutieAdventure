@@ -21,8 +21,10 @@ public class ChasingPlayer : MonoBehaviour
         patroll = GetComponent<EnemyPatrolling>();
         anim = GetComponent<Animator>();
     }
+
     private void Update()
     {
+        isMoving = patroll.isMoving;
         SearchForPlayer();
 
         UpdateAnimation();

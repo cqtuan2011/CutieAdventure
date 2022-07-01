@@ -9,6 +9,7 @@ public class EnemyShootingBehaviour : MonoBehaviour
     [SerializeField] float shootSpeed;
     [SerializeField] GameObject bullet;
     [SerializeField] Transform firePoint;
+    [SerializeField] bool lookAtPlayer;
 
     private AIOverlapDetector detector;
     private Animator anim;
@@ -63,7 +64,8 @@ public class EnemyShootingBehaviour : MonoBehaviour
     {
         if (shootingType == ShootingType.Horizontal && detector.playerInArea)
         {
-            GetComponent<WaypointFollower>().enabled = false;
+
+            DisableWaypointFollower();
 
             //onFacingPlayer += FacingPlayerDirection;
             //onFacingPlayer();
@@ -81,14 +83,23 @@ public class EnemyShootingBehaviour : MonoBehaviour
 
     private void FacingPlayerDirection()
     {
-        Vector3 scale = transform.localScale;
-        if (transform.position.x < playerToFollow.position.x)
+        if (lookAtPlayer)
         {
-            scale.x = -1;
-        }
-        else scale.x = 1;
+            Vector3 scale = transform.localScale;
+            if (transform.position.x < playerToFollow.position.x)
+            {
+                scale.x = -1;
+            }
+            else scale.x = 1;
 
-        transform.localScale = scale;
+            transform.localScale = scale;
+        }
+    }
+
+    private void DisableWaypointFollower()
+    {
+        if (GetComponent <WaypointFollower>() != null)
+        GetComponent<WaypointFollower>().enabled = false;
     }
 
     private enum ShootingType

@@ -250,6 +250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallingSpeed: 5
+  bouciness: 12
 --- !u!1 &8007840418928812102
 GameObject:
   m_ObjectHideFlags: 0

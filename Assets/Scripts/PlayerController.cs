@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private float movementSpeed;
     [SerializeField] private float jumpForce;
+    [SerializeField] private float pushForce;
     [SerializeField] private float groundCheckRadius;
     [SerializeField] private float wallCheckDistance;
     [SerializeField] private float wallSlidingSpeed;
@@ -149,7 +150,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void Jump()
+    public void Jump()
     {
         if (canJump)
         {
@@ -160,8 +161,9 @@ public class PlayerController : MonoBehaviour
 
         if (canWallJump)
         {
-            //rb.velocity = new Vector2(-rb.velocity.x, jumpForce);S
-            rb.velocity = new Vector2(-movementInputDirection * movementSpeed, jumpForce);
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            rb.AddForce(new Vector2((-transform.position.x * pushForce), 0f));
+            Debug.Log("Wall push!");
         }
     }
 

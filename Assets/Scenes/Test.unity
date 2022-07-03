@@ -31631,11 +31631,11 @@ MonoBehaviour:
   groundCheckRadius: 0.2
   groundCheck: {fileID: 661492313}
   wallSlidingSpeed: 2
-  wallCheckDistance: 0.6
+  wallCheckDistance: 0.65
   wallCheck: {fileID: 370176333}
   wallJumpForce: 12
   wallBounceForce: 1000
-  xPushIndex: 2
+  xPushIndex: 2.5
   yPushIndex: 7
   wallJumpDirection: 1
   runningDust: {fileID: 744349799}

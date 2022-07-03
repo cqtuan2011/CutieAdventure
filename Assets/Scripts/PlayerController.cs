@@ -173,16 +173,14 @@ public class PlayerController : MonoBehaviour
         if (canJump)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+
+            if (amountOfJumpLeft == 1)
+            {
+                anim.Play("DoubleJump");
+            }
             
             amountOfJumpLeft--;
         }
-
-        //if (canWallJump && movementInputDirection != 0)
-        //{
-        //    amountOfJumpLeft--;
-        //    Vector2 forceToAdd = new Vector2(-wallJumpDirection * wallJumpForce * 100, wallJumpForce);
-        //    rb.AddForce(forceToAdd, ForceMode2D.Impulse);
-        //}
 
         if (canWallJump && !isGrounded)
         {

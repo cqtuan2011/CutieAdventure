@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("For Movement")]
     [SerializeField] private float movementSpeed;
+    [SerializeField] private float airMoveSpeed = 35f;
     private float movementInputDirection;
     private bool isFacingRight = true;
     private bool isRunning;
@@ -39,8 +40,12 @@ public class PlayerController : MonoBehaviour
     [Space(10)]
 
     [Header("For Wall Jumping")]
-    [SerializeField] private float wallJumpForce;
-    [SerializeField] private float wallJumpDirection;
+    [SerializeField] private float wallJumpForce = 18f;
+    [SerializeField] private float wallBounceForce = 100f;
+    [SerializeField] private float xPushIndex = 2f;
+    [SerializeField] private float yPushIndex = 10f;
+    [SerializeField] private float wallJumpDirection = 1f;
+
     private bool canWallJump;
 
     [Space(10)]
@@ -172,12 +177,28 @@ public class PlayerController : MonoBehaviour
             amountOfJumpLeft--;
         }
 
-        if (canWallJump)
+        //if (canWallJump && movementInputDirection != 0)
+        //{
+        //    amountOfJumpLeft--;
+        //    Vector2 forceToAdd = new Vector2(-wallJumpDirection * wallJumpForce * 100, wallJumpForce);
+        //    rb.AddForce(forceToAdd, ForceMode2D.Impulse);
+        //}
+
+        if (canWallJump && !isGrounded)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-            rb.AddForce(new Vector2((-transform.position.x * pushForce), 0f));
-            Debug.Log("Wall push!");
-        }
+            rb.velocity = new Vector2(rb.velocity.x, wallJumpForce);
+
+            if (movementInputDirection == 0)
+            {
+                rb.AddForce(new Vector2(-wallJumpDirection * wallBounceForce * xPushIndex, yPushIndex));
+                Debug.Log("Wall push without movementInput!");
+            }
+            else
+            {
+                rb.AddForce(new Vector2(-movementInputDirection * wallBounceForce * xPushIndex, yPushIndex));
+                Debug.Log("Wall push with movementInput!");
+            }
+        } 
     }
 
     private void ApplyMovement()
@@ -198,6 +219,7 @@ public class PlayerController : MonoBehaviour
     {
         if (!isWallSliding)
         {
+            wallJumpDirection *= -1;
             isFacingRight = !isFacingRight;
             transform.Rotate(0.0f, 180.0f, 0.0f);
         }

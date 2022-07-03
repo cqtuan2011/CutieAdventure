@@ -31621,21 +31621,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88a9fb73b907069459b9c63a89d1d63d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTouchingRockHead: 0
-  amountOfJump: 2
   movementSpeed: 10
+  airMoveSpeed: 35
+  amountOfJump: 2
   jumpForce: 12
-  pushForce: 3
-  groundCheckRadius: 0.2
-  wallCheckDistance: 0.8
-  wallSlidingSpeed: 2
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
+  groundCheckRadius: 0.2
+  groundCheck: {fileID: 661492313}
+  wallSlidingSpeed: 2
+  wallCheckDistance: 0.6
+  wallCheck: {fileID: 370176333}
+  wallJumpForce: 12
+  wallBounceForce: 1000
+  xPushIndex: 2
+  yPushIndex: 7
+  wallJumpDirection: 1
   runningDust: {fileID: 744349799}
   wallSlidingDust: {fileID: 1038404317}
-  groundCheck: {fileID: 661492313}
-  wallCheck: {fileID: 370176333}
 --- !u!95 &1224963570
 Animator:
   serializedVersion: 4

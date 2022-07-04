@@ -10,7 +10,6 @@ public class PlayerController : MonoBehaviour
 
     [Header("For Movement")]
     [SerializeField] private float movementSpeed;
-    [SerializeField] private float airMoveSpeed = 35f;
     private float movementInputDirection;
     private bool isFacingRight = true;
     private bool isRunning;

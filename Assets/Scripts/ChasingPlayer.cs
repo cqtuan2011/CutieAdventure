@@ -15,11 +15,18 @@ public class ChasingPlayer : MonoBehaviour
     private Vector3 playerPos;
     private bool isMoving;
 
+    private float initialChasingSpeed;
+
     private void Awake()
     {
         detector = GetComponent<AIOverlapDetector>();
         patroll = GetComponent<EnemyPatrolling>();
         anim = GetComponent<Animator>();
+    }
+
+    private void Start()
+    {
+        initialChasingSpeed = enemyChasingSpeed;
     }
 
     private void Update()
@@ -86,6 +93,7 @@ public class ChasingPlayer : MonoBehaviour
         }
         else
         {
+            enemyChasingSpeed = initialChasingSpeed;
             isMoving = true;
         }
     }

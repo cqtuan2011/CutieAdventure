@@ -348,7 +348,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerToFollow: {fileID: 0}
-  enemyChasingSpeed: 4.8
+  enemyChasingSpeed: 5.3
 --- !u!114 &3860332071613053515
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -197,7 +197,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detectorSize: {x: 15.11, y: 5, z: 0}
   positionOffset: {x: 0, y: 2.5, z: 0}
-  hitBoxSize: {x: 6.96, y: 5, z: 0}
+  hitBoxSize: {x: 6.67, y: 4.36, z: 0}
   hitBoxPositionOffset: {x: 0, y: 2.44, z: 0}
   playerLayer:
     serializedVersion: 2

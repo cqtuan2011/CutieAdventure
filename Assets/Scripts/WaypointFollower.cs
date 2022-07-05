@@ -2,11 +2,18 @@
 
 public class WaypointFollower : MonoBehaviour
 {
+    public float movingSpeed = 2f;
+
+    [HideInInspector] public Transform firstPointPos;
     [SerializeField] private GameObject[] wayPoints;
-    [SerializeField] private float movingSpeed = 2f;
     [SerializeField] private bool enemyModeFlip;
 
     private int currentWaypointIndex = 0;
+
+    private void Start()
+    {
+        firstPointPos = wayPoints[0].transform;
+    }
 
     void Update()
     {

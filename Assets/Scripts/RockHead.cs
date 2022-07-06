@@ -5,63 +5,25 @@ using UnityEngine;
 
 public class RockHead : MonoBehaviour
 {
-    [SerializeField] private float movingDuration = 2f;
+    [HideInInspector] public bool leftWallChecked;
+    [HideInInspector] public bool rightWallChecked;
+
     [SerializeField] private float wallCheckDistance;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private Transform leftWallPoint;
     [SerializeField] private Transform rightWallPoint;
-    [SerializeField] private AnimationCurve curve;
 
     private Animator anim;
 
-    public Transform[] wayPoints;
-    private int currentWaypointIndex = 0;
-    private Vector2 currentPos;
-    private Vector2 targetPos;
-    
-    private float elapsedTimer;
-
-    public bool leftWallChecked;
-    public bool rightWallChecked;
-
     private void Awake()
     {
-        anim = GetComponent<Animator>();
-    }
-    private void Start()
-    {
-        currentPos = wayPoints[currentWaypointIndex].position;
-        targetPos = wayPoints[currentWaypointIndex + 1].position;
+        anim = GetComponent<Animator>();   
     }
 
     private void Update()
     {
-        Move();
         WallCheckHit();
         UpdateAnimation();
-    }
-
-    private void Move()
-    {
-        elapsedTimer += Time.deltaTime;
-
-        float percentageComplete = elapsedTimer / movingDuration;
-
-        if (Vector2.Distance(transform.position, targetPos) < .2f)
-        {
-            currentPos = targetPos;
-            targetPos = wayPoints[currentWaypointIndex].position;
-        }
-
-        transform.position = Vector2.Lerp(currentPos, targetPos, curve.Evaluate(percentageComplete));
-
-        //transform.position = Vector2.MoveTowards(transform.position, waypoints[currentWaypointIndex].position, curve.Evaluate());
-    }
-
-    private void UpdatePosition()
-    {
-        currentPos = wayPoints[currentWaypointIndex].position;
-        targetPos = wayPoints[currentWaypointIndex + 1].position;
     }
 
     private void UpdateAnimation()

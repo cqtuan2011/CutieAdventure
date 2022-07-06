@@ -7,12 +7,17 @@ public class WaypointFollower : MonoBehaviour
     [HideInInspector] public Transform firstPointPos;
     [SerializeField] private GameObject[] wayPoints;
     [SerializeField] private bool enemyModeFlip;
+    [SerializeField] private bool trapModePatroll;
+    [SerializeField] private float waitTime = 1f;
 
     private int currentWaypointIndex = 0;
+    private float timer;
+
 
     private void Start()
     {
         firstPointPos = wayPoints[0].transform;
+        timer = waitTime;
     }
 
     void Update()
@@ -24,7 +29,7 @@ public class WaypointFollower : MonoBehaviour
     {
         if (Vector2.Distance(transform.position, wayPoints[currentWaypointIndex].transform.position) < .2f)
         {
-            currentWaypointIndex++;
+            TrapModePatrolling();
 
             if (currentWaypointIndex >= wayPoints.Length)
             {
@@ -53,5 +58,27 @@ public class WaypointFollower : MonoBehaviour
             tmpScale.x = -1;
         }
         gameObject.transform.localScale = tmpScale;
+    }
+
+    private void TrapModePatrolling()
+    {
+        if (trapModePatroll)
+        {
+            TrapModeTimer();
+        } else
+        {
+            currentWaypointIndex++;
+        }
+    }
+
+    private void TrapModeTimer()
+    {
+        timer -= Time.deltaTime;
+
+        if (timer <= 0)
+        {
+            currentWaypointIndex++;
+            timer = waitTime;
+        }
     }
 }

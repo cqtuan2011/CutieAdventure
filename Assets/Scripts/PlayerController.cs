@@ -32,7 +32,6 @@ public class PlayerController : MonoBehaviour
     [Header("For Wall Sliding")]
     [SerializeField] private float wallSlidingSpeed;
     [SerializeField] private float wallCheckDistance;
-    [SerializeField] private Transform wallCheck;
     private bool isTouchingWall;
     private bool isWallSliding;
 
@@ -97,7 +96,7 @@ public class PlayerController : MonoBehaviour
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
-        isTouchingWall = Physics2D.Raycast(wallCheck.position, transform.right, wallCheckDistance, groundLayer);
+        isTouchingWall = Physics2D.Raycast(transform.position, transform.right, wallCheckDistance, groundLayer);
     }
 
     private void CheckIfCanJump()
@@ -225,7 +224,7 @@ public class PlayerController : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
-        Gizmos.DrawLine(wallCheck.position, new Vector3(wallCheck.position.x + wallCheckDistance, wallCheck.position.y, wallCheck.position.z));
+        Gizmos.DrawLine(transform.position, new Vector3(transform.position.x + wallCheckDistance, transform.position.y, transform.position.z));
     }
     
     private void OnCollisionEnter2D(Collision2D collision)

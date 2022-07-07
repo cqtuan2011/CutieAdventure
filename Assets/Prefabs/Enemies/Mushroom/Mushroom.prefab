@@ -77,7 +77,7 @@ GameObject:
   - component: {fileID: 4650936159263026276}
   - component: {fileID: 4650936159263026272}
   - component: {fileID: 4650936159263026275}
-  - component: {fileID: 4650936159263026279}
+  - component: {fileID: 1885332305}
   m_Layer: 8
   m_Name: Mushroom
   m_TagString: Untagged
@@ -237,11 +237,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a73ec99ed733cae4683304479e9a6e7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movingSpeed: 2
+  firstPointPos: {fileID: 0}
   wayPoints:
   - {fileID: 4650936159252112477}
   - {fileID: 4650936159133013215}
-  movingSpeed: 2
   enemyModeFlip: 1
+  trapModePatroll: 0
+  waitTime: 1
 --- !u!114 &4650936159263026275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,7 +260,7 @@ MonoBehaviour:
   isMoving: 0
   enemyMoveDuration: 5
   enemyIdleDuration: 3
---- !u!114 &4650936159263026279
+--- !u!114 &1885332305
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -266,10 +269,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 4650936159263026301}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c90f33fce3fe79a4da29d1b9f273d3a0, type: 3}
+  m_Script: {fileID: 11500000, guid: 5fdf9735f4f499947a6a5d3b4b9769b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallingSpeed: 8
+  deathBody: {fileID: 5282429110569058623, guid: 48fd78a76db122546a8c821f69696439,
+    type: 3}
+  bodyFallingSpeed: 10
   bouciness: 12
 --- !u!1 &4650936160680997613
 GameObject:

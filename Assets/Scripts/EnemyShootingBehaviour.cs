@@ -36,24 +36,15 @@ public class EnemyShootingBehaviour : MonoBehaviour
         TrunkMode();
     }
 
+    
+
     void Shoot() // Call by the event in Attack animation
     {
-        int direction() // Check bullet direction by flipX
-        {
-            if (transform.localScale.x == 1) // enemy facing left
-            {
-                return -1;
-            }
-            else  // enemy facing left
-            {
-                return 1;
-            }
-        }
         GameObject newBullet =  Instantiate(bullet, firePoint.position, Quaternion.identity);
 
         if (shootingType == ShootingType.Horizontal)
         {
-            newBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(shootSpeed * direction(), 0f);
+            newBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(shootSpeed * Direction(), 0f);
         } else
         {
             newBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, -shootSpeed);
@@ -100,6 +91,18 @@ public class EnemyShootingBehaviour : MonoBehaviour
     {
         if (GetComponent <WaypointFollower>() != null)
         GetComponent<WaypointFollower>().enabled = false;
+    }
+
+    public int Direction()
+    {
+        if (transform.localScale.x == 1) // enemy facing left
+        {
+            return -1;
+        }
+        else  // enemy facing right
+        {
+            return 1;
+        }
     }
 
     private enum ShootingType

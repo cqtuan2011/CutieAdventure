@@ -4951,7 +4951,7 @@ GameObject:
   - component: {fileID: 9184124279438401819}
   - component: {fileID: 9184124279438401818}
   - component: {fileID: 9184124279438401823}
-  - component: {fileID: 9184124279438401809}
+  - component: {fileID: 5553986052507545989}
   m_Layer: 0
   m_Name: Fat Bird
   m_TagString: Untagged
@@ -4967,7 +4967,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9184124279438401799}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.11, z: 0}
+  m_LocalPosition: {x: 0, y: -0.14, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5166,7 +5166,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
---- !u!114 &9184124279438401809
+--- !u!114 &5553986052507545989
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5175,11 +5175,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 9184124279438401799}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c90f33fce3fe79a4da29d1b9f273d3a0, type: 3}
+  m_Script: {fileID: 11500000, guid: 5fdf9735f4f499947a6a5d3b4b9769b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallingSpeed: 10
-  bouciness: 12
+  deathBody: {fileID: 5282429110569058623, guid: 9761b3bf59cd12f4a9b03fda2c0d515d,
+    type: 3}
+  bodyFallingSpeed: 10
+  bouciness: 10
 --- !u!1 &9184124279599757242
 GameObject:
   m_ObjectHideFlags: 0

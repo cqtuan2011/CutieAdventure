@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 8007840418879171466}
   - component: {fileID: 8007840418879171573}
   - component: {fileID: 8007840418879171572}
-  - component: {fileID: 8007840418879171575}
+  - component: {fileID: 532818403}
   m_Layer: 8
   m_Name: Chameleon
   m_TagString: Untagged
@@ -178,11 +178,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a73ec99ed733cae4683304479e9a6e7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movingSpeed: 2.5
+  firstPointPos: {fileID: 0}
   wayPoints:
   - {fileID: 8007840420900470582}
   - {fileID: 8007840419966798130}
-  movingSpeed: 2.5
   enemyModeFlip: 1
+  trapModePatroll: 0
+  waitTime: 1
 --- !u!114 &8007840418879171466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,7 +200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detectorSize: {x: 15.11, y: 5, z: 0}
   positionOffset: {x: 0, y: 2.5, z: 0}
-  hitBoxSize: {x: 6.67, y: 4.36, z: 0}
+  hitBoxSize: {x: 6.67, y: 4.86, z: 0}
   hitBoxPositionOffset: {x: 0, y: 2.44, z: 0}
   playerLayer:
     serializedVersion: 2
@@ -237,7 +240,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerToFollow: {fileID: 0}
   enemyChasingSpeed: 2
---- !u!114 &8007840418879171575
+--- !u!114 &532818403
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -246,11 +249,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 8007840418879171471}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c90f33fce3fe79a4da29d1b9f273d3a0, type: 3}
+  m_Script: {fileID: 11500000, guid: 5fdf9735f4f499947a6a5d3b4b9769b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallingSpeed: 5
-  bouciness: 12
+  deathBody: {fileID: 5282429110569058623, guid: 0853308384a8cd14cad79f376ab06827,
+    type: 3}
+  bodyFallingSpeed: 10
+  bouciness: 10
 --- !u!1 &8007840418928812102
 GameObject:
   m_ObjectHideFlags: 0

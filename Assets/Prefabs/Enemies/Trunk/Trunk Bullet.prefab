@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3554798561740996680}
   - component: {fileID: 5613539702561738979}
   - component: {fileID: 540489022870689119}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Trunk Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,3 +137,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletLifeTime: 10
+  bulletDestroy: {fileID: 493923884046885840, guid: 106c59468311a1f4c9a0e1b5f0ca6a75,
+    type: 3}

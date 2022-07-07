@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    [SerializeField] float bulletLifeTime = 10f; 
+    [SerializeField] private float bulletLifeTime = 10f;
+    [SerializeField] private GameObject bulletDestroy;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +17,10 @@ public class Bullet : MonoBehaviour
     {
         if (!collision.CompareTag("Player") && !collision.CompareTag("Camera"))
         {
+            var bulletPiece = Instantiate(bulletDestroy);
+
+            bulletPiece.transform.position = transform.position; 
+
             BulletDisappear();
         } 
     }

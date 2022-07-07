@@ -35,9 +35,6 @@ public class DestructibleObject : MonoBehaviour
 
     private void DestroyGameObject()
     {
-        
-        Debug.Log("Play particle");
-
         GameObject newObject = Instantiate(destructibleRef);
         GameObject particle = Instantiate(dustParticle);
 

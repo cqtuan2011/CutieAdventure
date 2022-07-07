@@ -122,3 +122,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forceDirection: {x: -200, y: 500}
   torque: 150
+  objectType: 1

@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 3860332071613053518}
   - component: {fileID: 3860332071613053516}
   - component: {fileID: 3860332071613053517}
-  - component: {fileID: 3860332071613053515}
+  - component: {fileID: 1713433179}
   m_Layer: 8
   m_Name: Chicken
   m_TagString: Untagged
@@ -290,11 +290,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a73ec99ed733cae4683304479e9a6e7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movingSpeed: 3.5
+  firstPointPos: {fileID: 0}
   wayPoints:
   - {fileID: 3860332071803822985}
   - {fileID: 3860332070207979700}
-  movingSpeed: 3.5
   enemyModeFlip: 1
+  trapModePatroll: 0
+  waitTime: 1
 --- !u!114 &3860332071613053518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -349,7 +352,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerToFollow: {fileID: 0}
   enemyChasingSpeed: 5.3
---- !u!114 &3860332071613053515
+--- !u!114 &1713433179
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -358,11 +361,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3860332071613053507}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c90f33fce3fe79a4da29d1b9f273d3a0, type: 3}
+  m_Script: {fileID: 11500000, guid: 5fdf9735f4f499947a6a5d3b4b9769b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallingSpeed: 6
-  bouciness: 12
+  deathBody: {fileID: 5282429110569058623, guid: fd3871bc2330ada498b3b9369c7e071a,
+    type: 3}
+  bodyFallingSpeed: 10
+  bouciness: 10
 --- !u!1 &3860332071803822985
 GameObject:
   m_ObjectHideFlags: 0

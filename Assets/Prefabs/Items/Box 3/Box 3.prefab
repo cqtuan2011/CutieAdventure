@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1968378258336543112}
   - component: {fileID: 7362361348559082}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   - component: {fileID: 2351567605013432338}
   - component: {fileID: 8550654984002009703}
   - component: {fileID: 2729061119758641872}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -205,7 +205,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 4
-  destructibleRef: {fileID: 0}
+  destructibleRef: {fileID: 4673893284865400155, guid: 323c7d0b939ebfc4490ec3d8be205bda,
+    type: 3}
   dustParticle: {fileID: 8269482066514516145, guid: 57498bcdc42644a4a9b1ee20e98c7286,
     type: 3}
   bounciness: 10

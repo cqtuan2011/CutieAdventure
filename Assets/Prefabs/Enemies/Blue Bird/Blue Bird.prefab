@@ -121,10 +121,10 @@ GameObject:
   - component: {fileID: 5358080500535811070}
   - component: {fileID: 5358080500535811071}
   - component: {fileID: 5358080500535811064}
-  - component: {fileID: 5358080500535811069}
   - component: {fileID: 5358080500535811059}
   - component: {fileID: 5358080500535811058}
   - component: {fileID: 1784163774}
+  - component: {fileID: 121501459}
   m_Layer: 8
   m_Name: Blue Bird
   m_TagString: Untagged
@@ -221,20 +221,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &5358080500535811069
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5358080500535811065}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c90f33fce3fe79a4da29d1b9f273d3a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fallingSpeed: 5
-  bouciness: 12
 --- !u!61 &5358080500535811059
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -305,6 +291,22 @@ MonoBehaviour:
   wayPoints:
   - {fileID: 5358080500075928944}
   - {fileID: 5358080499739735072}
+--- !u!114 &121501459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5358080500535811065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fdf9735f4f499947a6a5d3b4b9769b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathBody: {fileID: 5282429110569058623, guid: 4461b4e6e86269b49bab1a244b54d15f,
+    type: 3}
+  bodyFallingSpeed: 10
+  bouciness: 10
 --- !u!1 &5358080501613778747
 GameObject:
   m_ObjectHideFlags: 0

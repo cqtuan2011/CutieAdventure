@@ -137,3 +137,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletLifeTime: 10
+  bulletDestroy: {fileID: 993869943659078094, guid: b46d6a1cbeef2224d857c37b7c9b9c09,
+    type: 3}

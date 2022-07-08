@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 86b510c01b4f571499d87a2bd6373e03
+guid: c3f06aea21326d24895eb54690817eb3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 10
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -89,19 +89,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -124,29 +112,17 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Server
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Hit (32x32)_0
+      name: Heart&ManaUi_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 0
-        width: 18
-        height: 29
+        x: 2
+        y: 38
+        width: 16
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,20 +130,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f02935e322a975741a9ae80bdfa3c491
-      internalID: 853562017
+      spriteID: 9c0d24e7a8b30f34f9deecdb3aecab1b
+      internalID: 2051721887
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hit (32x32)_1
+      name: Heart&ManaUi_1
       rect:
         serializedVersion: 2
-        x: 40
-        y: 0
-        width: 18
-        height: 29
+        x: 21
+        y: 39
+        width: 11
+        height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,20 +151,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68d54ae9f121d3f4b846c76452808eec
-      internalID: 1197030075
+      spriteID: eef8be15ec088e34fb4e24600de09d07
+      internalID: 1560543947
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hit (32x32)_2
+      name: Heart&ManaUi_2
       rect:
         serializedVersion: 2
-        x: 71
-        y: 1
-        width: 20
-        height: 27
+        x: 33
+        y: 39
+        width: 11
+        height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -196,20 +172,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3756534a15555bd4aac2fb03f3368b8d
-      internalID: 1794327467
+      spriteID: f5462a94c3ad5e348878a0045dbbb3f8
+      internalID: 1609013498
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hit (32x32)_3
+      name: Heart&ManaUi_3
       rect:
         serializedVersion: 2
-        x: 101
-        y: 3
-        width: 24
-        height: 23
+        x: 21
+        y: 28
+        width: 10
+        height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -217,20 +193,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0276de693ed48a4a9679700cdd54de8
-      internalID: 969653347
+      spriteID: f4a70c7c1f6cc08488d64dfaaaae386e
+      internalID: -1191136272
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hit (32x32)_4
+      name: Heart&ManaUi_4
       rect:
         serializedVersion: 2
-        x: 132
-        y: 4
-        width: 26
-        height: 21
+        x: 33
+        y: 28
+        width: 10
+        height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -238,20 +214,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00202d549db0fbe4ea60c1ab4d82a06c
-      internalID: -1950066309
+      spriteID: cce03adc2d7567644ba1d6e765cdf408
+      internalID: 1242699980
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hit (32x32)_5
+      name: Heart&ManaUi_5
       rect:
         serializedVersion: 2
-        x: 165
-        y: 3
-        width: 24
-        height: 23
+        x: 2
+        y: 14
+        width: 16
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -259,20 +235,62 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91c59f9c156d2f64caaba39082198ad5
-      internalID: -1480879072
+      spriteID: 4a3e08a361dc5c24e82898693b9a283e
+      internalID: 45632887
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hit (32x32)_6
+      name: Heart&ManaUi_6
       rect:
         serializedVersion: 2
-        x: 198
+        x: 21
+        y: 14
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98ede356a5700fd4e86d0dddbb309650
+      internalID: 1323554738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heart&ManaUi_7
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 14
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eb003a331a03554891156c24a3d963d
+      internalID: 1493323450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heart&ManaUi_8
+      rect:
+        serializedVersion: 2
+        x: 21
         y: 2
-        width: 22
-        height: 25
+        width: 10
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -280,8 +298,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ce7acf627b77a34493b117379ae0b44
-      internalID: 127164116
+      spriteID: 87f02d6003cd4944f949213142f4e74e
+      internalID: 198447631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heart&ManaUi_9
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 2
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd5f2abe084a24747aebb0e4967d5688
+      internalID: 270322870
       vertices: []
       indices: 
       edges: []
@@ -297,13 +336,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Hit (32x32)_4: -1950066309
-      Hit (32x32)_5: -1480879072
-      Hit (32x32)_2: 1794327467
-      Hit (32x32)_3: 969653347
-      Hit (32x32)_6: 127164116
-      Hit (32x32)_1: 1197030075
-      Hit (32x32)_0: 853562017
+      Heart&ManaUi_5: 45632887
+      Heart&ManaUi_0: 2051721887
+      Heart&ManaUi_6: 1323554738
+      Heart&ManaUi_9: 270322870
+      Heart&ManaUi_1: 1560543947
+      Heart&ManaUi_7: 1493323450
+      Heart&ManaUi_2: 1609013498
+      Heart&ManaUi_4: 1242699980
+      Heart&ManaUi_3: -1191136272
+      Heart&ManaUi_8: 198447631
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

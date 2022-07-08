@@ -59,7 +59,6 @@ public class BatBehaviour : MonoBehaviour
     private void ChasingTarget(Vector3 target)
     {
         anim.SetTrigger("ceilingOut");
-        Debug.Log("CeilingOut is called");
         FlyTowardsTarget(target);
         FacingTowardsTarget(target);
     }

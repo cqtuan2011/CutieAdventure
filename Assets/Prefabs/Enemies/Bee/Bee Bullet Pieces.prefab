@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4303805514039910446}
   - component: {fileID: 5605072626674236165}
   - component: {fileID: 1115915960261222518}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bullet Pieces_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,7 +161,7 @@ GameObject:
   - component: {fileID: 6036399017441758100}
   - component: {fileID: 3775711974215215847}
   - component: {fileID: 4192981675358122819}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bee Bullet Pieces
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -221,7 +221,7 @@ GameObject:
   - component: {fileID: 5719273018254733428}
   - component: {fileID: 7147045850054948380}
   - component: {fileID: 4978240930863535110}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bullet Pieces_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}

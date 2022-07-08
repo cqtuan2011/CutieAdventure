@@ -39,10 +39,10 @@ public class PlayerController : MonoBehaviour
 
     [Header("For Wall Jumping")]
     [SerializeField] private float wallJumpForce = 18f;
-    [SerializeField] private float wallBounceForce = 100f;
-    [SerializeField] private float xPushIndex = 2f;
-    [SerializeField] private float yPushIndex = 10f;
-    [SerializeField] private float wallJumpDirection = 1f;
+    //[SerializeField] private float wallBounceForce = 100f;
+    //[SerializeField] private float xPushIndex = 2f;
+    //[SerializeField] private float yPushIndex = 10f;
+    //[SerializeField] private float wallJumpDirection = 1f;
 
     private bool canWallJump;
 
@@ -73,6 +73,7 @@ public class PlayerController : MonoBehaviour
         CheckIfCanJump();
         CheckIfWallSliding();
         CheckParticleSystem();
+        CheckForPlayerDie();
     }
 
     private void FixedUpdate()
@@ -184,16 +185,14 @@ public class PlayerController : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, wallJumpForce);
 
-            if (movementInputDirection == 0)
-            {
-                rb.AddForce(new Vector2(-wallJumpDirection * wallBounceForce * xPushIndex, yPushIndex));
-                Debug.Log("Wall push without movementInput!");
-            }
-            else
-            {
-                rb.AddForce(new Vector2(-movementInputDirection * wallBounceForce * xPushIndex, yPushIndex));
-                Debug.Log("Wall push with movementInput!");
-            }
+            //if (movementInputDirection == 0)
+            //{
+            //    rb.AddForce(new Vector2(-wallJumpDirection * wallBounceForce * xPushIndex, yPushIndex));
+            //}
+            //else
+            //{
+            //    rb.AddForce(new Vector2(-movementInputDirection * wallBounceForce * xPushIndex, yPushIndex));
+            //}
         } 
     }
 
@@ -215,7 +214,7 @@ public class PlayerController : MonoBehaviour
     {
         if (!isWallSliding)
         {
-            wallJumpDirection *= -1;
+            //wallJumpDirection *= -1;
             isFacingRight = !isFacingRight;
             transform.Rotate(0.0f, 180.0f, 0.0f);
         }
@@ -231,7 +230,10 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Trap"))
         {
-            PlayerDisappear();
+            if (HealthManager.Instance.currentHealth != 0)
+            {
+                PlayerGetHit();
+            } 
         }
 
         if (collision.gameObject.CompareTag("Trampoline") && isGrounded)
@@ -243,6 +245,23 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Trap"))
+        {
+            if (HealthManager.Instance.currentHealth != 0)
+            {
+                PlayerGetHit();
+            } 
+        }
+    }
+
+    private void PlayerGetHit()
+    {
+        anim.Play("Hit");
+        HealthManager.Instance.currentHealth--;
+    }
+
+    private void CheckForPlayerDie()
+    {
+        if (HealthManager.Instance.currentHealth <= 0)
         {
             PlayerDisappear();
         }

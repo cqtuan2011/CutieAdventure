@@ -11,7 +11,7 @@ public class EnemyShootingBehaviour : MonoBehaviour
     [SerializeField] Transform firePoint;
     [SerializeField] bool lookAtPlayer;
 
-    private AIOverlapDetector detector;
+    [SerializeField] private AIOverlapDetector detector;
     private Animator anim;
 
     //private delegate void OnFacingPlayer();
@@ -21,7 +21,6 @@ public class EnemyShootingBehaviour : MonoBehaviour
 
     private void Awake()
     {
-        detector = GetComponent<AIOverlapDetector>();
         anim = GetComponent<Animator>();
     }
 

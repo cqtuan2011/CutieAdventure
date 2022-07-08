@@ -1,5 +1,58 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2818977055804827529
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4964495977198699172}
+  - component: {fileID: 1598062891065941400}
+  m_Layer: 0
+  m_Name: Detector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4964495977198699172
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2818977055804827529}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8007840418928812097}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1598062891065941400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2818977055804827529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d390fdb89c3995748ac5c153130abe2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectorSize: {x: 15.92, y: 4.76, z: 0}
+  positionOffset: {x: 0.79, y: 2.32, z: 0}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  gizmosColor: {r: 0.16408658, g: 1, b: 0, a: 0.39607844}
+  detectedColor: {r: 1, g: 0, b: 0, a: 0.4745098}
+  drawGizmos: 1
+  playerInArea: 0
 --- !u!1 &8007840418879171471
 GameObject:
   m_ObjectHideFlags: 0
@@ -14,10 +67,10 @@ GameObject:
   - component: {fileID: 8007840418879171574}
   - component: {fileID: 8007840418879171467}
   - component: {fileID: 8007840418879171464}
-  - component: {fileID: 8007840418879171466}
   - component: {fileID: 8007840418879171573}
   - component: {fileID: 8007840418879171572}
   - component: {fileID: 532818403}
+  - component: {fileID: 1543039622}
   m_Layer: 8
   m_Name: Chameleon
   m_TagString: Untagged
@@ -186,31 +239,6 @@ MonoBehaviour:
   enemyModeFlip: 1
   trapModePatroll: 0
   waitTime: 1
---- !u!114 &8007840418879171466
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8007840418879171471}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d390fdb89c3995748ac5c153130abe2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  detectorSize: {x: 15.11, y: 5, z: 0}
-  positionOffset: {x: 0, y: 2.5, z: 0}
-  hitBoxSize: {x: 6.67, y: 4.86, z: 0}
-  hitBoxPositionOffset: {x: 0, y: 2.44, z: 0}
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 512
-  gizmosColor: {r: 0.32766104, g: 0.9811321, b: 0.3996199, a: 0.58431375}
-  detectedColor: {r: 1, g: 0.12641507, b: 0.12641507, a: 0.47058824}
-  hitBoxColor: {r: 0.9811321, g: 0.3184051, b: 0.9167129, a: 0.35686275}
-  drawGizmos: 1
-  playerInArea: 0
-  playerInHitArea: 0
 --- !u!114 &8007840418879171573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,8 +266,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d23b306ab7fbcd4428cdd7d4163232ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  detector: {fileID: 1598062891065941400}
   playerToFollow: {fileID: 0}
   enemyChasingSpeed: 2
+  attackType: 0
 --- !u!114 &532818403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -256,6 +286,27 @@ MonoBehaviour:
     type: 3}
   bodyFallingSpeed: 10
   bouciness: 10
+--- !u!114 &1543039622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8007840418879171471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c51bb3adcb1fdd244b0a9fc8fbbda5a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitBoxSize: {x: 5.72, y: 2.96, z: 0}
+  positionOffset: {x: 0, y: 1.47, z: 0}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  gizmosColor: {r: 0.98039216, g: 0.34117645, b: 0.4499465, a: 0.6392157}
+  detectedColor: {r: 0.6981773, g: 0.33081162, b: 0.990566, a: 0.56078434}
+  drawGizmos: 1
+  playerInHitArea: 0
 --- !u!1 &8007840418928812102
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,6 +338,7 @@ Transform:
   - {fileID: 8007840418879171465}
   - {fileID: 8007840420900470577}
   - {fileID: 8007840419966798141}
+  - {fileID: 4964495977198699172}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

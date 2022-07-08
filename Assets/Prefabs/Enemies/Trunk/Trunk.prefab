@@ -1,5 +1,58 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &431277584
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 431277585}
+  - component: {fileID: 431277586}
+  m_Layer: 0
+  m_Name: Detector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &431277585
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431277584}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3545664552354832628}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &431277586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431277584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d390fdb89c3995748ac5c153130abe2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectorSize: {x: 15.18, y: 3.73, z: 0}
+  positionOffset: {x: 4.34, y: 0.84, z: 0}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  gizmosColor: {r: 0.03151898, g: 0.9811321, b: 0, a: 0.49019608}
+  detectedColor: {r: 1, g: 0, b: 0, a: 0.4627451}
+  drawGizmos: 1
+  playerInArea: 0
 --- !u!1 &3545664551142956500
 GameObject:
   m_ObjectHideFlags: 0
@@ -45,7 +98,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.024208069, y: -0.31127}
+  m_Offset: {x: 0.008108139, y: -0.31127}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -56,7 +109,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.5464554, y: 1.3735242}
+  m_Size: {x: 1.3956413, y: 1.3735242}
   m_EdgeRadius: 0
 --- !u!1 &3545664551652933969
 GameObject:
@@ -182,6 +235,7 @@ Transform:
   - {fileID: 3545664552746811790}
   - {fileID: 3545664551838873200}
   - {fileID: 3545664551652933974}
+  - {fileID: 431277585}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -200,7 +254,6 @@ GameObject:
   - component: {fileID: 3545664552746811782}
   - component: {fileID: 3545664552746811788}
   - component: {fileID: 3545664552746811791}
-  - component: {fileID: 3545664552746811779}
   - component: {fileID: 3545664552746811776}
   - component: {fileID: 5050655669444902128}
   m_Layer: 8
@@ -387,31 +440,6 @@ MonoBehaviour:
   isMoving: 0
   enemyMoveDuration: 5
   enemyIdleDuration: 5
---- !u!114 &3545664552746811779
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3545664552746811785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d390fdb89c3995748ac5c153130abe2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  detectorSize: {x: 18.14, y: 4.74, z: 0}
-  positionOffset: {x: 0, y: 1.35, z: 0}
-  hitBoxSize: {x: 0, y: 0, z: 0}
-  hitBoxPositionOffset: {x: 0, y: 0, z: 0}
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 512
-  gizmosColor: {r: 0.14463787, g: 0.9433962, b: 0.08365962, a: 0.44705883}
-  detectedColor: {r: 1, g: 0.050943315, b: 0.050943315, a: 0.6117647}
-  hitBoxColor: {r: 0, g: 0, b: 0, a: 0}
-  drawGizmos: 1
-  playerInArea: 0
-  playerInHitArea: 0
 --- !u!114 &3545664552746811776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -429,6 +457,7 @@ MonoBehaviour:
   bullet: {fileID: 4705912094333836390, guid: 160e3754955dc3840a323dc2a08fbc09, type: 3}
   firePoint: {fileID: 3545664551905953674}
   lookAtPlayer: 1
+  detector: {fileID: 431277586}
   playerToFollow: {fileID: 0}
 --- !u!114 &5050655669444902128
 MonoBehaviour:

@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AIOverlapDetector : MonoBehaviour
+public class EnemyHitDetector : MonoBehaviour
 {
-    [SerializeField] private Vector3 detectorSize;
+    [SerializeField] private Vector3 hitBoxSize;
     [SerializeField] private Vector3 positionOffset;
 
     [Space(10)]
@@ -14,8 +14,8 @@ public class AIOverlapDetector : MonoBehaviour
     public Color detectedColor;
 
     public bool drawGizmos;
-    
-    [HideInInspector] public bool playerInArea;
+
+    [HideInInspector] public bool playerInHitArea;
     private void Update()
     {
         CheckSurrounding();
@@ -23,21 +23,22 @@ public class AIOverlapDetector : MonoBehaviour
 
     private void CheckSurrounding()
     {
-        playerInArea = Physics2D.OverlapBox(transform.position + positionOffset, detectorSize, 0, playerLayer);
+        playerInHitArea = Physics2D.OverlapBox(transform.position + positionOffset, hitBoxSize, 0, playerLayer);
     }
 
     private void OnDrawGizmos()
     {
         if (drawGizmos)
         {
-            if (!playerInArea)
+            if (!playerInHitArea)
             {
                 Gizmos.color = gizmosColor;
-            } else
+            }
+            else
             {
                 Gizmos.color = detectedColor;
             }
-            Gizmos.DrawCube(transform.position + positionOffset, detectorSize);
+            Gizmos.DrawCube(transform.position + positionOffset, hitBoxSize);
         }
     }
 }

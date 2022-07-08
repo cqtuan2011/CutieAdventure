@@ -2,26 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(AIOverlapDetector))]
 public class ChasingPlayer : MonoBehaviour
 {
-    private AIOverlapDetector detector;
     private EnemyPatrolling patroll;
     private Animator anim;
+    private EnemyHitDetector hitDetector;
 
+    [SerializeField] private AIOverlapDetector detector;
     [SerializeField] private Transform playerToFollow;
     [SerializeField] private float enemyChasingSpeed;
+    [SerializeField] private bool attackType;
 
     private Vector3 playerPos;
     private bool isMoving;
+
 
     private float initialChasingSpeed;
 
     private void Awake()
     {
-        detector = GetComponent<AIOverlapDetector>();
         patroll = GetComponent<EnemyPatrolling>();
         anim = GetComponent<Animator>();
+        
+        if (attackType)
+        {
+            hitDetector = GetComponent<EnemyHitDetector>();
+        }
     }
 
     private void Start()
@@ -69,6 +75,9 @@ public class ChasingPlayer : MonoBehaviour
             CheckDirection();
             transform.position = Vector2.MoveTowards(transform.position, playerPos, enemyChasingSpeed * Time.deltaTime);
             isMoving = true;
+
+            if (!attackType) return; 
+            
             CheckPlayerInHitArea();
         }
         else
@@ -85,7 +94,7 @@ public class ChasingPlayer : MonoBehaviour
 
     private void CheckPlayerInHitArea()
     {
-        if (detector.playerInHitArea)
+        if (hitDetector.playerInHitArea)
         {
             isMoving = false;
             anim.SetTrigger("Attack");

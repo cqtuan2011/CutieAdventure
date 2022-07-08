@@ -4967,7 +4967,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9184124279438401799}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.14, z: 0}
+  m_LocalPosition: {x: 0, y: 1.26, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5135,17 +5135,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detectorSize: {x: 1.63, y: 5.66, z: 0}
   positionOffset: {x: 0, y: -3.79, z: 0}
-  hitBoxSize: {x: 0, y: 0, z: 0}
-  hitBoxPositionOffset: {x: 0, y: 0, z: 0}
   playerLayer:
     serializedVersion: 2
     m_Bits: 512
   gizmosColor: {r: 0.39204544, g: 1, b: 0.22075468, a: 0.41960785}
   detectedColor: {r: 1, g: 0, b: 0, a: 0.39607844}
-  hitBoxColor: {r: 0, g: 0, b: 0, a: 0}
   drawGizmos: 1
   playerInArea: 0
-  playerInHitArea: 0
 --- !u!114 &9184124279438401823
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -209,17 +209,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detectorSize: {x: 27.9, y: 4.9, z: 0}
   positionOffset: {x: 12.6, y: 1.08, z: 0}
-  hitBoxSize: {x: 0, y: 0, z: 0}
-  hitBoxPositionOffset: {x: 0, y: 0, z: 0}
   playerLayer:
     serializedVersion: 2
     m_Bits: 512
   gizmosColor: {r: 0.07773125, g: 1, b: 0, a: 0.39215687}
   detectedColor: {r: 1, g: 0, b: 0, a: 0.39215687}
-  hitBoxColor: {r: 0, g: 0, b: 0, a: 0}
   drawGizmos: 1
   playerInArea: 0
-  playerInHitArea: 0
 --- !u!114 &2746992019971881367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,6 +233,7 @@ MonoBehaviour:
   bullet: {fileID: 328069428996037785, guid: 2f89c7b29600a6548852118b160e2620, type: 3}
   firePoint: {fileID: 2746992019927338612}
   lookAtPlayer: 0
+  detector: {fileID: 2746992019971881366}
   playerToFollow: {fileID: 0}
 --- !u!114 &531599488515402531
 MonoBehaviour:

@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    private Rigidbody2D rb;
-    private Animator anim;
 
     [Header("For Movement")]
     [SerializeField] private float movementSpeed;
@@ -39,11 +37,6 @@ public class PlayerController : MonoBehaviour
 
     [Header("For Wall Jumping")]
     [SerializeField] private float wallJumpForce = 18f;
-    //[SerializeField] private float wallBounceForce = 100f;
-    //[SerializeField] private float xPushIndex = 2f;
-    //[SerializeField] private float yPushIndex = 10f;
-    //[SerializeField] private float wallJumpDirection = 1f;
-
     private bool canWallJump;
 
     [Space(10)]
@@ -52,6 +45,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private ParticleSystem runningDust;
     [SerializeField] private ParticleSystem wallSlidingDust;
 
+    private Rigidbody2D rb;
+    private Animator anim;
+
+    [Space(10)]
+
+    [Header("Other")]
+
+    [SerializeField] private float invisibleTime = 1f;
+    [HideInInspector] public bool canTakeDamage;
 
     private void Awake()
     {
@@ -62,8 +64,8 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         amountOfJumpLeft = amountOfJump;
+        canTakeDamage = true;
     }
-
     
     void Update()
     {
@@ -228,7 +230,7 @@ public class PlayerController : MonoBehaviour
     
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Trap"))
+        if (canTakeDamage && collision.gameObject.CompareTag("Trap"))
         {
             if (HealthManager.Instance.currentHealth != 0)
             {
@@ -253,10 +255,19 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void PlayerGetHit()
+    public void PlayerGetHit()
     {
+        canTakeDamage = false;
         anim.Play("Hit");
         HealthManager.Instance.currentHealth--;
+        StartCoroutine(ResetTakeDamage());
+    }
+
+    IEnumerator ResetTakeDamage()
+    {
+        yield return new WaitForSeconds(invisibleTime);
+
+        canTakeDamage = true;
     }
 
     private void CheckForPlayerDie()
@@ -272,7 +283,7 @@ public class PlayerController : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void PlayerDisappear()
+    private void PlayerDisappear()
     {
         anim.Play("Disappear");
         GetComponent<Collider2D>().enabled = false;

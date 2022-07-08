@@ -5,6 +5,7 @@ using UnityEngine;
 public class FireBox : MonoBehaviour
 {
     private bool isOn;
+    private bool canHit;
     private Animator anim;
     public float fireTime = 3f;
     public float delayBeforeFire = 2f;
@@ -15,6 +16,11 @@ public class FireBox : MonoBehaviour
     {
         anim = GetComponent<Animator>();
     }
+
+    private void Start()
+    {
+        canHit = true;
+    }
     private void Update()
     {
         UpdateAnimation();
@@ -23,9 +29,10 @@ public class FireBox : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (canHit && collision.gameObject.CompareTag("Player"))
         {
             anim.SetTrigger("IsHit");
+            canHit = false;
         }
     }
 
@@ -33,7 +40,7 @@ public class FireBox : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            player.PlayerDisappear();
+            player.PlayerGetHit();
         }
     }
 
@@ -58,6 +65,7 @@ public class FireBox : MonoBehaviour
 
             isOn = false;
             GetComponent<CapsuleCollider2D>().enabled = false;
+            canHit = true;
         }
     }
 }

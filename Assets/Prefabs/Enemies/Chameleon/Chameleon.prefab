@@ -269,7 +269,7 @@ MonoBehaviour:
   detector: {fileID: 1598062891065941400}
   playerToFollow: {fileID: 0}
   enemyChasingSpeed: 2
-  attackType: 0
+  attackType: 1
 --- !u!114 &532818403
 MonoBehaviour:
   m_ObjectHideFlags: 0

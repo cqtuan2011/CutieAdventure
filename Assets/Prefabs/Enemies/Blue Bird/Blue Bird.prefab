@@ -306,7 +306,7 @@ MonoBehaviour:
   deathBody: {fileID: 5282429110569058623, guid: 4461b4e6e86269b49bab1a244b54d15f,
     type: 3}
   bodyFallingSpeed: 10
-  bouciness: 10
+  bouciness: 12
 --- !u!1 &5358080501613778747
 GameObject:
   m_ObjectHideFlags: 0

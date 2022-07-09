@@ -285,7 +285,7 @@ MonoBehaviour:
   deathBody: {fileID: 5282429110569058623, guid: 0853308384a8cd14cad79f376ab06827,
     type: 3}
   bodyFallingSpeed: 10
-  bouciness: 10
+  bouciness: 12
 --- !u!114 &1543039622
 MonoBehaviour:
   m_ObjectHideFlags: 0

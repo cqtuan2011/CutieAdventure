@@ -474,4 +474,4 @@ MonoBehaviour:
   deathBody: {fileID: 5282429110569058623, guid: 007ef2744992ab34487a26c0a14a9a31,
     type: 3}
   bodyFallingSpeed: 10
-  bouciness: 10
+  bouciness: 12

@@ -151,7 +151,7 @@ MonoBehaviour:
     type: 3}
   dustParticle: {fileID: 8269482066514516145, guid: 57498bcdc42644a4a9b1ee20e98c7286,
     type: 3}
-  bounciness: 10
+  bounciness: 11
 --- !u!1 &8303174580650530169
 GameObject:
   m_ObjectHideFlags: 0

@@ -268,7 +268,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detector: {fileID: 1598062891065941400}
   playerToFollow: {fileID: 0}
-  enemyChasingSpeed: 2
+  enemyChasingSpeed: 4.2
   attackType: 1
 --- !u!114 &532818403
 MonoBehaviour:
@@ -286,6 +286,7 @@ MonoBehaviour:
     type: 3}
   bodyFallingSpeed: 10
   bouciness: 12
+  enemyHealth: 1
 --- !u!114 &1543039622
 MonoBehaviour:
   m_ObjectHideFlags: 0

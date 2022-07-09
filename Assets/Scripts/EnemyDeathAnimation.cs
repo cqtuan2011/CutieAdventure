@@ -7,6 +7,7 @@ public class EnemyDeathAnimation : MonoBehaviour
     [SerializeField] private GameObject deathBody;
     [SerializeField] private float bodyFallingSpeed = 10f;
     [SerializeField] private float bouciness = 12f;
+    [SerializeField] private int enemyHealth = 1;
 
     private Rigidbody2D deathRb;
     private Animator anim;
@@ -21,17 +22,21 @@ public class EnemyDeathAnimation : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            enemyHealth--;
+
             PlayHitAnimation();
-            
             PlayerStompBouciness(collision);
         }
     }
 
     private void DeathBody() // trigger this event in the end of "Hit" Animation
     {
-        SpawnDeathBody();
-        DeathBodyFall();
-        Destroy(this.transform.root.gameObject);
+        if (enemyHealth <= 0)
+        {
+            SpawnDeathBody();
+            DeathBodyFall();
+            Destroy(this.transform.root.gameObject);
+        }
     }
 
     private void PlayerStompBouciness(Collider2D collision)

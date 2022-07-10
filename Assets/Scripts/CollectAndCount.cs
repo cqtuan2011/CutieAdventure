@@ -13,8 +13,7 @@ public class CollectAndCount : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("CollectableItems"))
         {
-            score += 10;
-            scoreText.text = "Score: " + score;
+            ScoreManager.Instance.AddScore();
         }
     }
 }

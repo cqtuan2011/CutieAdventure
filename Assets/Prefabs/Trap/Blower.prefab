@@ -4883,9 +4883,9 @@ PointEffector2D:
   m_ColliderMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_ForceMagnitude: 1200
+  m_ForceMagnitude: 1300
   m_ForceVariation: 0
-  m_DistanceScale: 1.5
+  m_DistanceScale: 1
   m_ForceSource: 0
   m_ForceTarget: 0
   m_ForceMode: 2

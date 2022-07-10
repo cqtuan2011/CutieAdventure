@@ -400,5 +400,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathBody: {fileID: 354476930180872324, guid: dd804b65799393c45af47f11c692df53,
     type: 3}
+  objToSpawn: {fileID: 0}
   bodyFallingSpeed: 10
-  bouciness: 12
+  bouciness: 18.5
+  enemyHealth: 1

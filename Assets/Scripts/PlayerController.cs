@@ -240,7 +240,7 @@ public class PlayerController : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Trampoline") && isGrounded)
         {
-            rb.AddForce(new Vector2(0, 15), ForceMode2D.Impulse);
+            rb.AddForce(new Vector2(0, 30), ForceMode2D.Impulse);
         }
     }
 

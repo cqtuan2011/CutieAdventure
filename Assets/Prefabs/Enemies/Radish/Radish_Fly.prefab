@@ -300,7 +300,7 @@ MonoBehaviour:
   objToSpawn: {fileID: 6687944409494770199, guid: 2b6e4458117a3cc48acc4e9478a02338,
     type: 3}
   bodyFallingSpeed: 10
-  bouciness: 12
+  bouciness: 18.5
   enemyHealth: 1
 --- !u!114 &4609977426259460686
 MonoBehaviour:

@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyDeathAnimation : MonoBehaviour
 {
     [SerializeField] private GameObject deathBody;
+    [SerializeField] private GameObject objToSpawn;
     [SerializeField] private float bodyFallingSpeed = 10f;
     [SerializeField] private float bouciness = 12f;
     [SerializeField] private int enemyHealth = 1;
@@ -35,6 +36,8 @@ public class EnemyDeathAnimation : MonoBehaviour
         {
             SpawnDeathBody();
             DeathBodyFall();
+            SpawnObject();
+            
             Destroy(this.transform.root.gameObject);
         }
     }
@@ -60,4 +63,13 @@ public class EnemyDeathAnimation : MonoBehaviour
     {
         deathRb.velocity = new Vector2(deathRb.velocity.x, bodyFallingSpeed);
     } 
+
+    private void SpawnObject()
+    {
+        if (objToSpawn == null) return;
+
+        var newObj = Instantiate(objToSpawn);
+
+        newObj.transform.position = transform.position;
+    }
 }

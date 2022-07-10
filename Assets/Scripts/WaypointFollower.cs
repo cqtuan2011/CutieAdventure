@@ -18,6 +18,7 @@ public class WaypointFollower : MonoBehaviour
     {
         firstPointPos = wayPoints[0].transform;
         timer = waitTime;
+        RandomFirstWaypointIndex();
     }
 
     void Update()
@@ -80,5 +81,11 @@ public class WaypointFollower : MonoBehaviour
             currentWaypointIndex++;
             timer = waitTime;
         }
+    }
+
+    private void RandomFirstWaypointIndex()
+    {
+        int index = Random.Range(0, wayPoints.Length);
+        currentWaypointIndex = index;
     }
 }

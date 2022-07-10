@@ -7,6 +7,7 @@ public class DestructibleObject : MonoBehaviour
 {
     [SerializeField] private int health = 2;
     [SerializeField] private GameObject destructibleRef;
+    [SerializeField] private GameObject[] itemToSpawn;
     [SerializeField] private GameObject dustParticle;
     [SerializeField] private float bounciness;
 
@@ -29,18 +30,35 @@ public class DestructibleObject : MonoBehaviour
 
         if (health <= 0)
         {
+            SpawnDestructibleRef();
+            SpawnItem();
             DestroyGameObject();
         }
     }
 
-    private void DestroyGameObject()
+    private void SpawnItem()
+    {
+        if (itemToSpawn != null)
+        {
+            foreach (GameObject item in itemToSpawn)
+            {
+                var newItem = Instantiate(item);
+                newItem.transform.position = transform.position;
+            }
+        }
+    }
+
+    private void SpawnDestructibleRef()
     {
         GameObject newObject = Instantiate(destructibleRef);
         GameObject particle = Instantiate(dustParticle);
 
         newObject.transform.position = transform.position;
         particle.transform.position = transform.position;
+    }
 
+    private void DestroyGameObject()
+    {
         Destroy(this.gameObject);
     }
 }

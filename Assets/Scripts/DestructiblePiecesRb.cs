@@ -43,22 +43,6 @@ public class DestructiblePiecesRb : MonoBehaviour
                 }
                 randForceY = Random.Range(forceDirection.y - 50, forceDirection.y + 50);
                 break;
-
-            //case ObjectType.Bullet:
-
-            //    var shootingBehaviour = GetComponent<EnemyShootingBehaviour>();
-
-            //    if (shootingBehaviour.Direction() == 1) // enemy facing left, bullet bounce to right
-            //    {
-            //        randForceX = Random.Range(forceDirection.x - 20, forceDirection.x + 20);
-            //        randTorque = Random.Range(torque - 20, torque + 20);
-            //    } else if (shootingBehaviour.Direction() == -1) // enemy facing right, bullet bounce to left
-            //    {
-            //        randForceX = -Random.Range(forceDirection.x - 20, forceDirection.x + 20);
-            //        randTorque = -Random.Range(torque - 20, torque + 20);
-            //    }
-            //    randForceY = Random.Range(forceDirection.y - 10, forceDirection.y + 10);
-            //    break;
         }
 
         forceDirection.x = randForceX;
@@ -79,6 +63,5 @@ public class DestructiblePiecesRb : MonoBehaviour
     {
         Object,
         Enemy,
-        Bullet,
     }
 }

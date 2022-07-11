@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cfca0aa72defb0a4c87c22e8a7032f3b
+guid: 492483f485aaa0242a51bebb8350e276
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -8,9 +8,8 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: Press Start 2P
   fontNames:
-  - Press Start 2P
+  - Pixel Lofi
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

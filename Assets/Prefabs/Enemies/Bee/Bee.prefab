@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1470152533}
   - component: {fileID: 1470152534}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Dangerous Zone
   m_TagString: Trap
   m_Icon: {fileID: 0}

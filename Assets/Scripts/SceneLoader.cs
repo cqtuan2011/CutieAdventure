@@ -20,6 +20,11 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene(currentSceneIndex);
     }
 
+    public void LoadSceneName(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
+
     public void LoadNextScene()
     {
         SceneManager.LoadScene(currentSceneIndex + 1);
@@ -28,5 +33,10 @@ public class SceneLoader : MonoBehaviour
     public void LoadLevelSelectScene()
     {
         SceneManager.LoadScene(LEVEL_SELECT_SCENE);
+    }
+
+    public void ExitApplication()
+    {
+        Application.Quit();
     }
 }

@@ -237,11 +237,6 @@ public class PlayerController : MonoBehaviour
                 PlayerGetHit();
             } 
         }
-
-        if (collision.gameObject.CompareTag("Trampoline") && isGrounded)
-        {
-            rb.AddForce(new Vector2(0, 30), ForceMode2D.Impulse);
-        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

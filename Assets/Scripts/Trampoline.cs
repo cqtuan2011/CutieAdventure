@@ -5,6 +5,7 @@ using UnityEngine;
 public class Trampoline : MonoBehaviour
 {
     private Animator anim;
+    [SerializeField] private float force = 25f;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +18,9 @@ public class Trampoline : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             anim.Play("Push");
+            var playerRb = collision.gameObject.GetComponent<Rigidbody2D>();
+
+            playerRb.AddForce(new Vector2(0, force), ForceMode2D.Impulse);
         }
     }
 }

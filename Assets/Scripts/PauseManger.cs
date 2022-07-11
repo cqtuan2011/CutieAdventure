@@ -14,9 +14,11 @@ public class PauseManger : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            PauseGame();
+            if (Time.timeScale == 1f)
+            PauseGame(); 
+            else ResumeGame();
         }
     }
 
@@ -24,12 +26,6 @@ public class PauseManger : MonoBehaviour
     {
         Time.timeScale = 0f;
         pauseMenu.SetActive(true);
-    }
-
-    public void ResumeGame()
-    {
-        Time.timeScale = 1f;
-        pauseMenu.SetActive(false);
     }
 
     public void RestartGame()
@@ -40,9 +36,23 @@ public class PauseManger : MonoBehaviour
         SceneManager.LoadScene(currentScene);
     }
 
-    public void LoadMenu(string menuName)
+    private void ResumeGame()
     {
-        SceneManager.LoadScene(menuName);
+        if (Input.GetKeyDown(KeyCode.Escape) && Time.timeScale == 0)
+        {
+            pauseMenu.SetActive(false);
+            Time.timeScale = 1f;
+        }
+    }
+
+    public void LoadSettingMenu(string settingMenuName)
+    {
+        SceneManager.LoadScene(settingMenuName);
+    }
+
+    public void LoadMenu(string mainMenuName)
+    {
+        SceneManager.LoadScene(mainMenuName);
     }
 
     public void ExitApplication()

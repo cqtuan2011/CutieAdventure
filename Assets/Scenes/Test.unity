@@ -16598,9 +16598,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'RESUME
-
-'
+  m_text: SETTINGS
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -16627,8 +16625,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 61.96
-  m_fontSizeBase: 61.96
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -16884,11 +16882,11 @@ RectTransform:
   m_Children:
   - {fileID: 19067796}
   m_Father: {fileID: 1749892021}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 997, y: -555.4149}
+  m_AnchoredPosition: {x: 997, y: -448}
   m_SizeDelta: {x: 392.8843, y: 127.388}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &406769156
@@ -27949,7 +27947,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &810066461
 Transform:
   m_ObjectHideFlags: 0
@@ -28064,7 +28062,7 @@ GameObject:
   - component: {fileID: 838308472}
   - component: {fileID: 838308471}
   m_Layer: 5
-  m_Name: Resume Button
+  m_Name: Setting Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28084,11 +28082,11 @@ RectTransform:
   m_Children:
   - {fileID: 339604845}
   m_Father: {fileID: 1749892021}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 997, y: -310.585}
+  m_AnchoredPosition: {x: 997, y: -577}
   m_SizeDelta: {x: 392.8843, y: 127.388}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &838308471
@@ -28137,8 +28135,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 810066462}
         m_TargetAssemblyTypeName: PauseManger, Assembly-CSharp
-        m_MethodName: ResumeGame
-        m_Mode: 1
+        m_MethodName: LoadSettingMenu
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -28684,11 +28682,11 @@ RectTransform:
   m_Children:
   - {fileID: 1233397978}
   m_Father: {fileID: 1749892021}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 997, y: -433}
+  m_AnchoredPosition: {x: 997, y: -321}
   m_SizeDelta: {x: 392.8843, y: 127.388}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1023299551
@@ -34305,7 +34303,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!212 &1224963567
 SpriteRenderer:
@@ -35437,7 +35435,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 997, y: -677.82996}
+  m_AnchoredPosition: {x: 997, y: -704}
   m_SizeDelta: {x: 392.8843, y: 127.388}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1598207095
@@ -35783,9 +35781,9 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 838308470}
   - {fileID: 1023299550}
   - {fileID: 406769155}
+  - {fileID: 838308470}
   - {fileID: 1598207094}
   m_Father: {fileID: 757972145}
   m_RootOrder: 4
@@ -36346,6 +36344,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Trampoline (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6880810810845044389, guid: 3636d65cb5b226a47a0a7ec360b50dfb,
+        type: 3}
+      propertyPath: force
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6880810810845044390, guid: 3636d65cb5b226a47a0a7ec360b50dfb,
         type: 3}

@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class CheckPoint : MonoBehaviour
 {
+    [SerializeField] private CheckPointType checkPointType;
+    [SerializeField] private GameObject winMenu;
+    
     private Animator anim;
 
     private void Awake()
@@ -15,6 +18,22 @@ public class CheckPoint : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             anim.SetTrigger("isTouched");
+
+            switch (checkPointType)
+            {
+                case CheckPointType.StartPoint:
+                    break;
+                case CheckPointType.EndPoint:
+                    winMenu.SetActive(true);
+                    Time.timeScale = 0f;
+                    break;
+            }
         }
+    }
+
+    private enum CheckPointType
+    {
+        StartPoint,
+        EndPoint,
     }
 }

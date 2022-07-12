@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2607744688682097576
+--- !u!1 &117408899563242918
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2607744688682097579}
-  - component: {fileID: 2607744688682097578}
+  - component: {fileID: 117408899563242919}
+  - component: {fileID: 117408899563242916}
   m_Layer: 0
-  m_Name: Health Manager
+  m_Name: Pause Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2607744688682097579
+--- !u!4 &117408899563242919
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2607744688682097576}
+  m_GameObject: {fileID: 117408899563242918}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -32,22 +32,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2607744688682097578
+--- !u!114 &117408899563242916
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2607744688682097576}
+  m_GameObject: {fileID: 117408899563242918}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d57bf2aa74ce02245a4181b9114fede7, type: 3}
+  m_Script: {fileID: 11500000, guid: 00ac55317a901334aae9669994b1f15f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 3
-  heartSlot:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  fullHeart: {fileID: 41328300, guid: c602098665e21c44fb5b141c66aeacbc, type: 3}
-  emptyHeart: {fileID: 1719325734, guid: c602098665e21c44fb5b141c66aeacbc, type: 3}
+  pauseMenu: {fileID: 0}

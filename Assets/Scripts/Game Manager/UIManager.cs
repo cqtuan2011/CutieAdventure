@@ -6,6 +6,8 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager Instance;
 
+    [SerializeField] private GameObject pauseManager;
+
     private void Awake()
     {
         if (Instance == null)
@@ -48,5 +50,10 @@ public class UIManager : MonoBehaviour
     {
         SetTimeScale(1);
         SceneLoader.Instance.LoadSceneName(mainMenuName);
+    }
+
+    public void DisablePauseFunction()
+    {
+        pauseManager.SetActive(false);
     }
 }

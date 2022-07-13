@@ -35,6 +35,9 @@ public class EnemyDeathAnimation : MonoBehaviour
         if (enemyHealth <= 0)
         {
             SpawnDeathBody();
+
+            CinemachineShake.Instance.Shake(3f, 0.12f);
+
             DeathBodyFall();
             SpawnObject();
             

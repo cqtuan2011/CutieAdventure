@@ -6,7 +6,24 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager Instance;
 
-    [SerializeField] private GameObject pauseManager;
+    [Header("Pause Menu")]
+    [Space(5)]
+    [SerializeField] private GameObject pauseMenu;
+    [SerializeField] private PauseManger pauseManager;
+
+    [Space(10)]
+
+    [Header("Win Menu")]
+    [Space(5)]
+    [SerializeField] private GameObject winMenu;
+    [SerializeField] private WinManager winManager;
+
+    [Space(10)]
+
+    [Header("Lose Menu")]
+    [Space(5)]
+    [SerializeField] private GameObject loseMenu;
+    [SerializeField] private LoseManager loseManager;
 
     private void Awake()
     {
@@ -14,6 +31,8 @@ public class UIManager : MonoBehaviour
         {
             Instance = this;
         }
+
+        SetTimeScale(1);
     }
 
     public void LoadLevelSelectScene()
@@ -52,8 +71,19 @@ public class UIManager : MonoBehaviour
         SceneLoader.Instance.LoadSceneName(mainMenuName);
     }
 
-    public void DisablePauseFunction()
+    public void OpenWinMenu()
     {
-        pauseManager.SetActive(false);
+        SetTimeScale(0);
+        winMenu.SetActive(true);
+
+        pauseManager.enabled = false;
+    }
+
+    public void OpenLoseMenu()
+    {
+        SetTimeScale(0);
+        loseMenu.SetActive(true);
+
+        pauseManager.enabled = false;
     }
 }

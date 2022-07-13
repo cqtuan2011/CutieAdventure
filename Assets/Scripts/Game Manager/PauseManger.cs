@@ -24,6 +24,7 @@ public class PauseManger : MonoBehaviour
     private void PauseGame()
     {
         Time.timeScale = 0f;
+        Debug.Log("pauseManager PauseGame function");
         pauseMenu.SetActive(true);
     }
 

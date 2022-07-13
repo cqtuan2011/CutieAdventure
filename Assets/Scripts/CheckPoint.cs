@@ -24,9 +24,7 @@ public class CheckPoint : MonoBehaviour
                 case CheckPointType.StartPoint:
                     break;
                 case CheckPointType.EndPoint:
-                    winMenu.SetActive(true);
-                    UIManager.Instance.DisablePauseFunction();
-                    Time.timeScale = 0f;
+                    UIManager.Instance.OpenWinMenu();
                     break;
             }
         }

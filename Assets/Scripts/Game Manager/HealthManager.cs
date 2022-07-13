@@ -29,6 +29,12 @@ public class HealthManager : MonoBehaviour
 
     private void Update()
     {
+        UpdateHeartImage();
+        HealthCheck();
+    }
+
+    private void UpdateHeartImage()
+    {
         foreach (Image img in heartSlot)
         {
             img.sprite = emptyHeart;
@@ -37,6 +43,14 @@ public class HealthManager : MonoBehaviour
         for (int i = 0; i < currentHealth; i++)
         {
             heartSlot[i].sprite = fullHeart;
+        }
+    }
+
+    private void HealthCheck()
+    {
+        if (currentHealth <= 0)
+        {
+            UIManager.Instance.OpenLoseMenu();
         }
     }
 }

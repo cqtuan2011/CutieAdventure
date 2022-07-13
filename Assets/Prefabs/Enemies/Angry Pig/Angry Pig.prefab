@@ -352,6 +352,7 @@ MonoBehaviour:
   - {fileID: 2086896323847190466}
   enemyModeFlip: 1
   trapModePatroll: 0
+  randomWaypointIndex: 1
   waitTime: 1
 --- !u!114 &2086896323992918002
 MonoBehaviour:

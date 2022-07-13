@@ -35,28 +35,27 @@ public class UIManager : MonoBehaviour
         SetTimeScale(1);
     }
 
-    public void LoadLevelSelectScene()
+    private void Update()
+    {
+        Debug.Log(Time.timeScale);
+    }
+
+    public void LoadLevelSelectScene(string levelSelect)
     {
         SetTimeScale(1);
-        
-        SceneLoader.Instance.LoadLevelSelectScene();
+        SceneLoader.Instance.LoadSceneName(levelSelect);
     }
 
     public void LoadNextLevel()
     {
         SetTimeScale(1);
-
         SceneLoader.Instance.LoadNextScene();
     }
     public void RestartGame()
     {
         SetTimeScale(1);
-
+        Debug.Log("Restar pressed " + Time.timeScale);
         SceneLoader.Instance.ReloadScene();
-    }
-    private void SetTimeScale(float timeScale)
-    {
-        Time.timeScale = timeScale;
     }
 
     public void LoadSettingMenu(string settingMenuName)
@@ -85,5 +84,10 @@ public class UIManager : MonoBehaviour
         loseMenu.SetActive(true);
 
         pauseManager.enabled = false;
+    }
+
+    private void SetTimeScale(float timeScale)
+    {
+        Time.timeScale = timeScale;
     }
 }

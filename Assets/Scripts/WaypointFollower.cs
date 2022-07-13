@@ -8,9 +8,10 @@ public class WaypointFollower : MonoBehaviour
     [SerializeField] private GameObject[] wayPoints;
     [SerializeField] private bool enemyModeFlip;
     [SerializeField] private bool trapModePatroll;
+    [SerializeField] private bool randomWaypointIndex;
     [SerializeField] private float waitTime = 1f;
 
-    private int currentWaypointIndex = 0;
+    private int currentWaypointIndex;
     private float timer;
 
 
@@ -85,7 +86,13 @@ public class WaypointFollower : MonoBehaviour
 
     private void RandomFirstWaypointIndex()
     {
-        int index = Random.Range(0, wayPoints.Length);
-        currentWaypointIndex = index;
+        if (randomWaypointIndex)
+        {
+            int index = Random.Range(0, wayPoints.Length);
+            currentWaypointIndex = index;
+        } else
+        {
+            currentWaypointIndex = 0;
+        }
     }
 }

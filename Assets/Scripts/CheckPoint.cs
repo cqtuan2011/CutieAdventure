@@ -24,7 +24,7 @@ public class CheckPoint : MonoBehaviour
                 case CheckPointType.StartPoint:
                     break;
                 case CheckPointType.EndPoint:
-                    UIManager.Instance.OpenWinMenu();
+                    UIManager.Instance.Invoke("OpenWinMenu", 0.5f);
                     break;
             }
         }

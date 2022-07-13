@@ -269,6 +269,7 @@ public class PlayerController : MonoBehaviour
     {
         if (HealthManager.Instance.currentHealth <= 0)
         {
+            CinemachineShake.Instance.Shake(5f, 0.15f);
             PlayerDisappear();
         }
     }

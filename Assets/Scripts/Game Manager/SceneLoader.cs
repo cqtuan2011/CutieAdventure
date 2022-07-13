@@ -8,40 +8,69 @@ public class SceneLoader : MonoBehaviour
     public static SceneLoader Instance { get; private set; }
 
     private int currentSceneIndex;
-    private const string LEVEL_SELECT_SCENE = "";
+
+    [SerializeField] private float transitionDelayTime = 0.4f;
+    [SerializeField] private GameObject sceneTransition;
 
     private void Awake()
     {
         Instance = this;
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
     }
+
+    private void Start()
+    {
+        sceneTransition.SetActive(true);
+    }
     public void ReloadScene()
     {
-        SceneManager.LoadScene(currentSceneIndex);
+        StartCoroutine(LoadSceneIndex(currentSceneIndex));
     }
 
     public void LoadSceneName(string sceneName)
     {
-        SceneManager.LoadScene(sceneName);
+        StartCoroutine(LoadSceneString(sceneName));
     }
 
     public void LoadNextScene()
     {
-        SceneManager.LoadScene(currentSceneIndex + 1);
-    }
-
-    public void LoadLevelSelectScene()
-    {
-        SceneManager.LoadScene(LEVEL_SELECT_SCENE);
+        StartCoroutine(LoadSceneIndex(currentSceneIndex + 1));
     }
 
     public void ExitApplication()
     {
-        Application.Quit();
+        StartCoroutine(ExitGame());
     }
 
-    public string GetSceneName()
+    public string GetSceneName() // for UI update menu
     {
         return SceneManager.GetActiveScene().name;
+    }
+
+    private IEnumerator LoadSceneIndex (int levelIndex)
+    {
+        SceneTransition.Instance.PlayTransitionEffect();
+
+        yield return new WaitForSeconds(transitionDelayTime);
+
+        SceneManager.LoadScene(levelIndex);
+    }
+
+    private IEnumerator LoadSceneString(string sceneName)
+    {
+        SceneTransition.Instance.PlayTransitionEffect();
+
+        yield return new WaitForSeconds(transitionDelayTime);
+
+        SceneManager.LoadScene(sceneName);
+    }
+
+    private IEnumerator ExitGame()
+    {
+        SceneTransition.Instance.PlayTransitionEffect();
+
+        yield return new WaitForSeconds(transitionDelayTime);
+
+        Application.Quit();
     }
 }

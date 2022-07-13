@@ -63,6 +63,6 @@ TagManager:
   - name: Enemy
     uniqueID: 3392724715
     locked: 0
-  - name: 
+  - name: Transition
     uniqueID: 2506401971
     locked: 0

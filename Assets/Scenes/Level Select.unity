@@ -176,8 +176,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   starImg:
-  - {fileID: 1664682073}
   - {fileID: 1041246980}
+  - {fileID: 1664682073}
   - {fileID: 1645869255}
   unfilledColor: {r: 0.23921569, g: 0.23921569, b: 0.23921569, a: 1}
   collectedStar: 0
@@ -1189,8 +1189,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   starImg:
-  - {fileID: 966791888}
   - {fileID: 317770617}
+  - {fileID: 966791888}
   - {fileID: 763866624}
   unfilledColor: {r: 0.23921569, g: 0.23921569, b: 0.23921569, a: 1}
   collectedStar: 0
@@ -2096,8 +2096,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   starImg:
-  - {fileID: 1253243097}
   - {fileID: 1459714704}
+  - {fileID: 1253243097}
   - {fileID: 249861709}
   unfilledColor: {r: 0.23921569, g: 0.23921569, b: 0.23921569, a: 1}
   collectedStar: 0
@@ -2908,8 +2908,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   starImg:
-  - {fileID: 1339707025}
   - {fileID: 1840677210}
+  - {fileID: 1339707025}
   - {fileID: 1412845863}
   unfilledColor: {r: 0.23921569, g: 0.23921569, b: 0.23921569, a: 1}
   collectedStar: 0
@@ -2966,8 +2966,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   starImg:
-  - {fileID: 270873482}
   - {fileID: 1625768924}
+  - {fileID: 270873482}
   - {fileID: 341735608}
   unfilledColor: {r: 0.23921569, g: 0.23921569, b: 0.23921569, a: 1}
   collectedStar: 0

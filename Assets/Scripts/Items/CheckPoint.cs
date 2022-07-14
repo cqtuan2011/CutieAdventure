@@ -5,7 +5,6 @@ using UnityEngine;
 public class CheckPoint : MonoBehaviour
 {
     [SerializeField] private CheckPointType checkPointType;
-    [SerializeField] private GameObject winMenu;
     
     private Animator anim;
 

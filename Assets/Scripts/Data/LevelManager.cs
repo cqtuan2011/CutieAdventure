@@ -11,7 +11,7 @@ public class LevelManager : MonoBehaviour
 
     private List<LevelData> levelDataList;
 
-    private void Start()
+    private void Awake()
     {
         if (Instance == null)
         {
@@ -33,8 +33,6 @@ public class LevelManager : MonoBehaviour
             var newListData = JsonConvert.DeserializeObject<List<LevelData>>(savedData);
 
             levelDataList = newListData;
-
-            Debug.Log("this is new level data: " + savedData);
         }
     }
 

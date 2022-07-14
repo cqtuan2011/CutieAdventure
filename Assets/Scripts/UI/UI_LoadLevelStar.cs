@@ -14,6 +14,10 @@ public class UI_LoadLevelStar : MonoBehaviour
     private void Start()
     {
         PrepareStar();
+    }
+
+    private void Update()
+    {
         UpdateCollectedStar();
     }
 

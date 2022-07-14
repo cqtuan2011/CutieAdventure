@@ -4,15 +4,32 @@ using UnityEngine;
 
 public class UI_StarManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private UI_LoadLevelStar[] level;
+
+    private List<LevelData> levelDataList;
+
+    private void Awake()
     {
-        
+        level = GetComponentsInChildren<UI_LoadLevelStar>(); 
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        levelDataList = LevelManager.Instance.GetLevelDataList();
+        UpdateStarUI();
+    }
+
+    private void UpdateStarUI()
+    {
+        if (levelDataList == null)
+        {
+            Debug.Log("level data list is null");
+        } else
+        {
+            for (int i = 0; i < levelDataList.Count; i++)
+            {
+                level[i].collectedStar = levelDataList[i].colectedStars;
+            }    
+        }
     }
 }

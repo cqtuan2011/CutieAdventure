@@ -25,6 +25,12 @@ public class CheckPoint : MonoBehaviour
                     break;
                 case CheckPointType.EndPoint:
                     UIManager.Instance.Invoke("OpenWinMenu", 0.5f);
+
+                    var newData = new LevelData();
+                    newData.levelIndex = int.Parse(SceneLoader.Instance.GetSceneName());
+                    newData.colectedStars = StarManager.Instance.starAmount;
+                    
+                    LevelManager.Instance.UpdateLevelData(newData);
                     break;
             }
         }

@@ -10,17 +10,21 @@ public class SceneLoader : MonoBehaviour
     private int currentSceneIndex;
 
     [SerializeField] private float transitionDelayTime = 0.4f;
-    [SerializeField] private GameObject sceneTransition;
+
+    [SerializeField] private GameObject transitionEffect;
+
+    private SceneTransition sceneTransition;
 
     private void Awake()
     {
         Instance = this;
-        currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        sceneTransition = transitionEffect.GetComponent<SceneTransition>();
     }
 
     private void Start()
     {
-        sceneTransition.SetActive(true);
+        transitionEffect.SetActive(true);
+        currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
     }
     public void ReloadScene()
     {
@@ -49,7 +53,7 @@ public class SceneLoader : MonoBehaviour
 
     private IEnumerator LoadSceneIndex (int levelIndex)
     {
-        SceneTransition.Instance.PlayTransitionEffect();
+        sceneTransition.PlayTransitionEffect();
 
         yield return new WaitForSeconds(transitionDelayTime);
 
@@ -58,7 +62,7 @@ public class SceneLoader : MonoBehaviour
 
     private IEnumerator LoadSceneString(string sceneName)
     {
-        SceneTransition.Instance.PlayTransitionEffect();
+        sceneTransition.PlayTransitionEffect();
 
         yield return new WaitForSeconds(transitionDelayTime);
 
@@ -67,7 +71,7 @@ public class SceneLoader : MonoBehaviour
 
     private IEnumerator ExitGame()
     {
-        SceneTransition.Instance.PlayTransitionEffect();
+        sceneTransition.PlayTransitionEffect();
 
         yield return new WaitForSeconds(transitionDelayTime);
 

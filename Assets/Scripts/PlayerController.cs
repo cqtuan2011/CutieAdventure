@@ -254,7 +254,7 @@ public class PlayerController : MonoBehaviour
     {
         canTakeDamage = false;
         anim.Play("Hit");
-        HealthManager.Instance.currentHealth--;
+        HealthManager.Instance.TakeDamage();
         StartCoroutine(ResetTakeDamage());
     }
 

@@ -35,11 +35,6 @@ public class UIManager : MonoBehaviour
         SetTimeScale(1);
     }
 
-    private void Update()
-    {
-        Debug.Log(Time.timeScale);
-    }
-
     public void LoadLevelSelectScene(string levelSelect)
     {
         SetTimeScale(1);
@@ -54,7 +49,6 @@ public class UIManager : MonoBehaviour
     public void RestartGame()
     {
         SetTimeScale(1);
-        Debug.Log("Restar pressed " + Time.timeScale);
         SceneLoader.Instance.ReloadScene();
     }
 

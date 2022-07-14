@@ -15,8 +15,6 @@ public class HealthManager : MonoBehaviour
     public Sprite fullHeart;
     public Sprite emptyHeart;
 
-    private bool playerDie = false;
-
     private void Awake()
     {
         if (Instance == null)
@@ -32,8 +30,6 @@ public class HealthManager : MonoBehaviour
     private void Update()
     {
         UpdateHeartImage();
-        HealthCheck();
-        PlayerDie();
     }
 
     private void UpdateHeartImage()
@@ -49,21 +45,13 @@ public class HealthManager : MonoBehaviour
         }
     }
 
-    private void HealthCheck()
+    public void TakeDamage()
     {
+        currentHealth--;
+
         if (currentHealth <= 0)
         {
-            playerDie = true;
-            return;
-        }
-    }
-
-    private void PlayerDie()
-    {
-        if (playerDie)
-        {
-            UIManager.Instance.Invoke("OpenLoseMenu", 0.35f);
-            playerDie = false;
+            UIManager.Instance.Invoke("OpenLoseMenu", 0.5f);
         }
     }
 }

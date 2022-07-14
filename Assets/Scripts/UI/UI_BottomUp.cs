@@ -9,6 +9,7 @@ public class UI_BottomUp : MonoBehaviour
 
     [SerializeField] private float delayStart = 0.5f;
     [SerializeField] private float delayDisplay = 0.1f;
+    [SerializeField] private float posY = -90f;
 
     private void Start()
     {
@@ -21,7 +22,7 @@ public class UI_BottomUp : MonoBehaviour
 
         for (int i = 0; i < buttons.Count; i++)
         {
-            buttons[i].DOAnchorPosY(-85f, 0.6f).SetEase(Ease.OutBack);
+            buttons[i].DOAnchorPosY(posY, 0.6f).SetEase(Ease.OutBack);
             yield return new WaitForSeconds(delayDisplay);
         }
     }

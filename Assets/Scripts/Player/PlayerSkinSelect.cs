@@ -21,30 +21,35 @@ public class PlayerSkinSelect : MonoBehaviour
 
     private void Start()
     {
-        switch(playerSelected)
-        {
-            case Player.NinjaFrog:
-                spriteRenderer.sprite = playerSprite[1];
-                anim.runtimeAnimatorController = playerController[1];
-                break;
+        var i = PlayerPrefs.GetInt("currentSelectedCharacter");
 
-            case Player.VirtualGuy:
-                spriteRenderer.sprite = playerSprite[3];
-                anim.runtimeAnimatorController = playerController[3];
-                break;
+        spriteRenderer.sprite = playerSprite[i];
+        anim.runtimeAnimatorController = playerController[i];
 
-            case Player.PinkMan:
-                spriteRenderer.sprite = playerSprite[2];
-                anim.runtimeAnimatorController = playerController[2];
-                break;
+        //switch(playerSelected)
+        //{
+        //    case Player.NinjaFrog:
+        //        spriteRenderer.sprite = playerSprite[1];
+        //        anim.runtimeAnimatorController = playerController[1];
+        //        break;
 
-            case Player.MaskDude:
-                spriteRenderer.sprite = playerSprite[0];
-                anim.runtimeAnimatorController = playerController[0];
-                break;
+        //    case Player.VirtualGuy:
+        //        spriteRenderer.sprite = playerSprite[3];
+        //        anim.runtimeAnimatorController = playerController[3];
+        //        break;
 
-            default:
-                break;
-        }
+        //    case Player.PinkMan:
+        //        spriteRenderer.sprite = playerSprite[2];
+        //        anim.runtimeAnimatorController = playerController[2];
+        //        break;
+
+        //    case Player.MaskDude:
+        //        spriteRenderer.sprite = playerSprite[0];
+        //        anim.runtimeAnimatorController = playerController[0];
+        //        break;
+
+        //    default:
+        //        break;
+        //}
     }
 }

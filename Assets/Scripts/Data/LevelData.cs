@@ -16,7 +16,13 @@ public class LevelData
     public void UpdateData(LevelData levelData)
     {
         this.levelIndex = levelData.levelIndex;
-        this.colectedStars = levelData.colectedStars;
+
+        if (this.colectedStars < levelData.colectedStars)
+        {
+            this.colectedStars = levelData.colectedStars;
+        }
+        else return;
+
     }
 }
 

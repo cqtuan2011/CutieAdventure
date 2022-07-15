@@ -34727,8 +34727,9 @@ GameObject:
   - component: {fileID: 1224963565}
   - component: {fileID: 1224963570}
   - component: {fileID: 1224963569}
+  - component: {fileID: 1224963571}
   m_Layer: 9
-  m_Name: Pink Man
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34865,6 +34866,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88a9fb73b907069459b9c63a89d1d63d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cinemachineVirtualCamera: {fileID: 500113950}
   movementSpeed: 10
   amountOfJump: 2
   jumpForce: 18.5
@@ -34900,6 +34902,29 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1224963571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1224963564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb1748f9ccf674e45aed7ada75114792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSelected: 1
+  playerController:
+  - {fileID: 22100000, guid: 9350bf7368894ef41911c46be5af0dd4, type: 2}
+  - {fileID: 22100000, guid: ffeb15b188327e44eb2192247eda94c8, type: 2}
+  - {fileID: 9100000, guid: 5da4ddd8e69771d4a9992b9e36e67db8, type: 2}
+  - {fileID: 22100000, guid: c96233393f7a0464ca42725d1d30560d, type: 2}
+  playerSprite:
+  - {fileID: -871676272, guid: fe6224535848c0e4395cdf0b1908f7d9, type: 3}
+  - {fileID: -6367560908665664636, guid: 5cab914336dbd404c98748802186a6c1, type: 3}
+  - {fileID: -6367560908665664636, guid: 23ac9db9d713bea44b2e39a2a8a98cfb, type: 3}
+  - {fileID: 1933216324, guid: 4b7a2744066b8ee4c89538e46f317cc9, type: 3}
 --- !u!1 &1225840886
 GameObject:
   m_ObjectHideFlags: 0

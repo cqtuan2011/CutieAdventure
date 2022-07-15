@@ -2,9 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Cinemachine;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("Camera")]
+    [SerializeField] CinemachineVirtualCamera cinemachineVirtualCamera;
+
 
     [Header("For Movement")]
     [SerializeField] private float movementSpeed;
@@ -65,6 +69,7 @@ public class PlayerController : MonoBehaviour
     {
         amountOfJumpLeft = amountOfJump;
         canTakeDamage = true;
+        cinemachineVirtualCamera.Follow = this.gameObject.transform;
     }
     
     void Update()

@@ -24,6 +24,7 @@ public class EnemyDeathAnimation : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             enemyHealth--;
+            AudioManager.Instance.PlayEffectSound("Hit");
 
             PlayHitAnimation();
             PlayerStompBouciness(collision);

@@ -22,6 +22,7 @@ public class CollectableItem : MonoBehaviour
             {
                 case ItemType.AddScore:
                     ScoreManager.Instance.AddScore();
+                    AudioManager.Instance.PlayEffectSound("Pick Coin");
                     break;
 
                 case ItemType.AddHeart:
@@ -30,6 +31,7 @@ public class CollectableItem : MonoBehaviour
 
                 case ItemType.AddStar:
                     StarManager.Instance.starAmount++;
+                    AudioManager.Instance.PlayEffectSound("Pick Star");
                     break;
             }
 

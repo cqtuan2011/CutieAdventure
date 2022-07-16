@@ -178,6 +178,7 @@ public class PlayerController : MonoBehaviour
     {
         if (canJump)
         {
+            AudioManager.Instance.PlayEffectSound("Jump");
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
 
             if (amountOfJumpLeft == 1)
@@ -191,6 +192,7 @@ public class PlayerController : MonoBehaviour
         if (canWallJump && !isGrounded)
         {
             rb.velocity = new Vector2(rb.velocity.x, wallJumpForce);
+            AudioManager.Instance.PlayEffectSound("Jump");
 
             //if (movementInputDirection == 0)
             //{
@@ -259,6 +261,7 @@ public class PlayerController : MonoBehaviour
     {
         canTakeDamage = false;
         anim.Play("Hit");
+        AudioManager.Instance.PlayEffectSound("Hurt");
         HealthManager.Instance.TakeDamage();
         StartCoroutine(ResetTakeDamage());
     }

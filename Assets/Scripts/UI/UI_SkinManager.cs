@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class UI_SkinManager : MonoBehaviour
 {
@@ -11,8 +12,9 @@ public class UI_SkinManager : MonoBehaviour
 
     [SerializeField] private Animator frameAnim;
 
+    [SerializeField] private TextMeshProUGUI characterName;
+
     private Image skinDisplay;
-    
 
     private void Awake()
     {
@@ -23,7 +25,7 @@ public class UI_SkinManager : MonoBehaviour
     {
         currentSelectedCharacter = PlayerPrefs.GetInt("currentSelectedCharacter");
 
-        UpdateCharacterImage(currentSelectedCharacter);
+        UpdateCharacter(currentSelectedCharacter);
     }
 
     public void PreviousButtonClick()
@@ -35,7 +37,7 @@ public class UI_SkinManager : MonoBehaviour
         {
             currentSelectedCharacter = character.Length - 1;
         }
-        UpdateCharacterImage(currentSelectedCharacter);
+        UpdateCharacter(currentSelectedCharacter);
     }
 
     public void NextButtonClick()
@@ -47,13 +49,35 @@ public class UI_SkinManager : MonoBehaviour
         {
             currentSelectedCharacter = 0;
         }
-        UpdateCharacterImage(currentSelectedCharacter);
+        UpdateCharacter(currentSelectedCharacter);
     }
 
-    private void UpdateCharacterImage(int currentSelectedCharacter)
+    private void UpdateCharacter(int currentSelectedCharacter)
     {
         skinDisplay.sprite = character[currentSelectedCharacter];
+        UpdateCharacterName();
         PlayerPrefs.SetInt("currentSelectedCharacter", currentSelectedCharacter);
+    }
+
+    private void UpdateCharacterName()
+    {
+        switch (currentSelectedCharacter)
+        {
+            case 0:
+                characterName.text = "Mask Dude";
+                break;
+            case 1:
+                characterName.text = "Ninja Frog";
+                break;
+            case 2:
+                characterName.text = "Pink Man";
+                break;
+            case 3:
+                characterName.text = "Virtual Guy";
+                break;
+            default:
+                break;
+        }
     }
 
     private void TriggerFrameAnimation()

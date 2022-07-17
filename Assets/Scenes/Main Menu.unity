@@ -199,18 +199,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3637923}
   m_CullTransparentMesh: 1
---- !u!114 &50952351 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6882260824823459912, guid: d6993ce345e3f704a9ddae5aad0b0ca6,
-    type: 3}
-  m_PrefabInstance: {fileID: 6882260824773691607}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9127b71384e9747439cfb7686850f12e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &191757993
 GameObject:
   m_ObjectHideFlags: 0
@@ -540,26 +528,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 467188967}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Script: {fileID: 11500000, guid: 01eb443e9b40dc946bfdf491da8ec706, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 50952351}
-          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-          m_MethodName: PlayUIEffectSound
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: Button Hovering
-            m_BoolArgument: 0
-          m_CallState: 2
+  hoveringSoundName: Button Hovering
+  clickSoundName: Click
 --- !u!1 &580496639
 GameObject:
   m_ObjectHideFlags: 0
@@ -869,26 +842,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 699003290}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Script: {fileID: 11500000, guid: 01eb443e9b40dc946bfdf491da8ec706, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 50952351}
-          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-          m_MethodName: PlayUIEffectSound
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: Button Hovering
-            m_BoolArgument: 0
-          m_CallState: 2
+  hoveringSoundName: Button Hovering
+  clickSoundName: Click
 --- !u!1001 &918923015
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1170,8 +1128,8 @@ GameObject:
   - component: {fileID: 1402671677}
   - component: {fileID: 1402671676}
   - component: {fileID: 1402671675}
-  - component: {fileID: 1402671678}
   - component: {fileID: 1402671679}
+  - component: {fileID: 1402671680}
   m_Layer: 5
   m_Name: Play Button
   m_TagString: Untagged
@@ -1257,18 +1215,6 @@ MonoBehaviour:
           m_StringArgument: Level Select
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 50952351}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: PlayUIEffectSound
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Click
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1402671676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1307,35 +1253,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1402671673}
   m_CullTransparentMesh: 1
---- !u!114 &1402671678
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1402671673}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 50952351}
-          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-          m_MethodName: PlayUIEffectSound
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: Button Hovering
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!95 &1402671679
 Animator:
   serializedVersion: 4
@@ -1356,6 +1273,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1402671680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1402671673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01eb443e9b40dc946bfdf491da8ec706, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoveringSoundName: Button Hovering
+  clickSoundName: Click
 --- !u!1 &1452001164
 GameObject:
   m_ObjectHideFlags: 0
@@ -1833,26 +1764,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1676617265}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Script: {fileID: 11500000, guid: 01eb443e9b40dc946bfdf491da8ec706, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 50952351}
-          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-          m_MethodName: PlayUIEffectSound
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: Button Hovering
-            m_BoolArgument: 0
-          m_CallState: 2
+  hoveringSoundName: Button Hovering
+  clickSoundName: Click
 --- !u!1 &1783059437
 GameObject:
   m_ObjectHideFlags: 0
@@ -2268,6 +2184,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6882260824512878229, guid: d6993ce345e3f704a9ddae5aad0b0ca6,
+        type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6882260824684389583, guid: d6993ce345e3f704a9ddae5aad0b0ca6,
+        type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6882260824823459912, guid: d6993ce345e3f704a9ddae5aad0b0ca6,
+        type: 3}
+      propertyPath: audios.Array.data[1].volume
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 6882260824823459913, guid: d6993ce345e3f704a9ddae5aad0b0ca6,
         type: 3}
       propertyPath: m_RootOrder

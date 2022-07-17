@@ -146,4 +146,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   checkPointType: 1
-  winMenu: {fileID: 0}

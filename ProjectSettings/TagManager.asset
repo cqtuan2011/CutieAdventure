@@ -51,8 +51,14 @@ TagManager:
   - name: Background
     uniqueID: 3631076185
     locked: 0
+  - name: MiddleGround
+    uniqueID: 764810459
+    locked: 0
   - name: Ground
     uniqueID: 3929089079
+    locked: 0
+  - name: Foreground
+    uniqueID: 2745408887
     locked: 0
   - name: Collectable Items
     uniqueID: 1422119315

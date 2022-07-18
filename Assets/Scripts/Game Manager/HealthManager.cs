@@ -54,4 +54,10 @@ public class HealthManager : MonoBehaviour
             UIManager.Instance.Invoke("OpenLoseMenu", 0.5f);
         }
     }
+
+    public void AddHeart()
+    {
+        if (currentHealth >= maxHealth) return;
+        currentHealth++;
+    }
 }

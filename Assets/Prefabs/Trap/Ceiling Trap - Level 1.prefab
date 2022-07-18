@@ -204,4 +204,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: add75f66cf893d940808e9405f1a06e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startAfterSeconds: 0
+  startAfterSeconds: 1

@@ -26,7 +26,7 @@ public class CollectableItem : MonoBehaviour
                     break;
 
                 case ItemType.AddHeart:
-                    HealthManager.Instance.currentHealth++;
+                    HealthManager.Instance.AddHeart();
                     break;
 
                 case ItemType.AddStar:

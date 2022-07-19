@@ -448,7 +448,7 @@ SortingGroup:
   m_Enabled: 1
   m_SortingLayerID: 764810459
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: -1
 --- !u!1 &457510947220089703
 GameObject:
   m_ObjectHideFlags: 0

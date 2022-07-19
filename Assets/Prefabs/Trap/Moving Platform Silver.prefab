@@ -65,7 +65,7 @@ PrefabInstance:
     - target: {fileID: 7535605570335288025, guid: 0895ef16e2cd72342be9f258baa97caa,
         type: 3}
       propertyPath: m_Name
-      value: Grey Platform
+      value: Moving Platform Silver
       objectReference: {fileID: 0}
     - target: {fileID: 7535605570478603950, guid: 0895ef16e2cd72342be9f258baa97caa,
         type: 3}

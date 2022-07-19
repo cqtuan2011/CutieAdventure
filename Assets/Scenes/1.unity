@@ -2612,7 +2612,7 @@ GameObject:
   m_Component:
   - component: {fileID: 114020483}
   m_Layer: 0
-  m_Name: Collectable
+  m_Name: Collectible
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3946,7 +3946,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 3882, y: 865}
-  m_SizeDelta: {x: 386.67, y: 50}
+  m_SizeDelta: {x: 654.7, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &168770977
 Animator:
@@ -3988,7 +3988,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Let's try get all the stars
+  m_text: Let's try to get all the stars
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c1946bf483e2cb04d91a8ffdfab8cf65, type: 2}
   m_sharedMaterial: {fileID: 9148695458984963670, guid: c1946bf483e2cb04d91a8ffdfab8cf65,
@@ -81009,7 +81009,7 @@ PrefabInstance:
         type: 3}
       propertyPath: audios.Array.data[1].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 033766cc31c97904bae4404b8a079544, type: 3}
+      objectReference: {fileID: 8300000, guid: 89f935015cc98724a862a586326fdf21, type: 3}
     - target: {fileID: 6882260824823459913, guid: d6993ce345e3f704a9ddae5aad0b0ca6,
         type: 3}
       propertyPath: m_RootOrder

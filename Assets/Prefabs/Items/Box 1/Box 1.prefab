@@ -75,7 +75,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -365878217
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e15a8d7d33f2e8748ad4ae8d1427ad33, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -149,6 +149,8 @@ MonoBehaviour:
   health: 1
   destructibleRef: {fileID: 59500841795903240, guid: 5f04220e40c909d48bedfc6a41021c6b,
     type: 3}
+  itemToSpawn:
+  - {fileID: 5623322897111713623, guid: c3845d65e603ba94abb78d789c7705c3, type: 3}
   dustParticle: {fileID: 8269482066514516145, guid: 57498bcdc42644a4a9b1ee20e98c7286,
     type: 3}
   bounciness: 18.5

@@ -17,13 +17,8 @@ public class FallingPlatform : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            anim.SetTrigger("PlayerOn");
+            rb.bodyType = RigidbodyType2D.Dynamic;
+            anim.enabled = false;
         }
-    }
-
-    private void Falling() // function called in the end of "PlayerOn" animation
-    {
-        anim.enabled = false;
-        rb.bodyType = RigidbodyType2D.Dynamic;
     }
 }

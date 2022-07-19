@@ -30,6 +30,7 @@ public class DestructibleObject : MonoBehaviour
 
         if (health <= 0)
         {
+            CinemachineShake.Instance.Shake(5f, 0.15f);
             SpawnDestructibleRef();
             SpawnItem();
             DestroyGameObject();

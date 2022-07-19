@@ -311,7 +311,7 @@ MonoBehaviour:
     clip: {fileID: 0}
     volume: 0
   - name: Background Music
-    clip: {fileID: 8300000, guid: 3dabf76daefc4d242b85311ca7755976, type: 3}
+    clip: {fileID: 8300000, guid: 35967e8a4dfb1664e9b066939272c0a4, type: 3}
     volume: 0.3
   - name: Button Hovering
     clip: {fileID: 8300000, guid: 574ea83e9ea997f48aa9f4b4adf3bfea, type: 3}

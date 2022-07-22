@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 259286997163080768}
   - component: {fileID: 5090754477150453515}
   - component: {fileID: 6015340259328627787}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bee Bullet
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -902242581
-  m_SortingLayer: 5
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 669ef922a468d184489d2a28b0f84bb0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

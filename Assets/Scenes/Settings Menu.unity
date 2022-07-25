@@ -292,6 +292,7 @@ GameObject:
   - component: {fileID: 11172596}
   - component: {fileID: 11172595}
   - component: {fileID: 11172594}
+  - component: {fileID: 11172597}
   m_Layer: 5
   m_Name: Next Button
   m_TagString: Untagged
@@ -415,6 +416,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 11172592}
   m_CullTransparentMesh: 1
+--- !u!114 &11172597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11172592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01eb443e9b40dc946bfdf491da8ec706, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoveringSoundName: Button Hovering
+  clickSoundName: Click
 --- !u!1 &51229420
 GameObject:
   m_ObjectHideFlags: 0
@@ -584,6 +599,7 @@ GameObject:
   - component: {fileID: 100428680}
   - component: {fileID: 100428679}
   - component: {fileID: 100428678}
+  - component: {fileID: 100428681}
   m_Layer: 5
   m_Name: Back Button
   m_TagString: Untagged
@@ -705,6 +721,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100428676}
   m_CullTransparentMesh: 1
+--- !u!114 &100428681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100428676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01eb443e9b40dc946bfdf491da8ec706, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoveringSoundName: Button Hovering
+  clickSoundName: Click
 --- !u!114 &246306688 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5188770097992171488, guid: 3da62bb265d6f9a4187bbc1372c1b549,
@@ -1510,6 +1540,7 @@ GameObject:
   - component: {fileID: 1657594770}
   - component: {fileID: 1657594769}
   - component: {fileID: 1657594768}
+  - component: {fileID: 1657594771}
   m_Layer: 5
   m_Name: Previous Button
   m_TagString: Untagged
@@ -1633,6 +1664,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1657594766}
   m_CullTransparentMesh: 1
+--- !u!114 &1657594771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1657594766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01eb443e9b40dc946bfdf491da8ec706, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoveringSoundName: Button Hovering
+  clickSoundName: Click
 --- !u!1 &1685128161
 GameObject:
   m_ObjectHideFlags: 0
@@ -2116,3 +2161,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c8b7d93d0c4e664e9eab96f30781abc, type: 3}
+--- !u!1 &2357938699774032808 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2357938701032036813, guid: 8c8b7d93d0c4e664e9eab96f30781abc,
+    type: 3}
+  m_PrefabInstance: {fileID: 2357938699774032807}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2357938699774032809 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2357938699589233460, guid: 8c8b7d93d0c4e664e9eab96f30781abc,
+    type: 3}
+  m_PrefabInstance: {fileID: 2357938699774032807}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2357938699774032810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2357938699774032808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01eb443e9b40dc946bfdf491da8ec706, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoveringSoundName: Button Hovering
+  clickSoundName: Click
+--- !u!114 &2357938699774032811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2357938699774032809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01eb443e9b40dc946bfdf491da8ec706, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoveringSoundName: Button Hovering
+  clickSoundName: Click

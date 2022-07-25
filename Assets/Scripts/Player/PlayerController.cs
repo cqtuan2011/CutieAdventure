@@ -272,6 +272,7 @@ public class PlayerController : MonoBehaviour
 
     public void PlayerDie() // trigger in disappear animation
     {
+        AudioManager.Instance.PlayUIEffectSound("GameOver");
         Destroy(gameObject);
     }
 

@@ -27,6 +27,7 @@ public class CollectableItem : MonoBehaviour
 
                 case ItemType.AddHeart:
                     HealthManager.Instance.AddHeart();
+                    AudioManager.Instance.PlayEffectSound("Heal");
                     break;
 
                 case ItemType.AddStar:

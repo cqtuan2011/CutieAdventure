@@ -350,6 +350,7 @@ GameObject:
   - component: {fileID: 100428680}
   - component: {fileID: 100428679}
   - component: {fileID: 100428678}
+  - component: {fileID: 100428681}
   m_Layer: 5
   m_Name: Back Button
   m_TagString: Untagged
@@ -471,6 +472,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100428676}
   m_CullTransparentMesh: 1
+--- !u!114 &100428681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100428676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01eb443e9b40dc946bfdf491da8ec706, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoveringSoundName: Button Hovering
+  clickSoundName: Click
 --- !u!1 &112141346
 GameObject:
   m_ObjectHideFlags: 0
@@ -484,6 +499,7 @@ GameObject:
   - component: {fileID: 112141349}
   - component: {fileID: 112141348}
   - component: {fileID: 112141351}
+  - component: {fileID: 112141352}
   m_Layer: 5
   m_Name: Level 1
   m_TagString: Untagged
@@ -626,6 +642,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &112141352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 112141346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01eb443e9b40dc946bfdf491da8ec706, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoveringSoundName: Button Hovering
+  clickSoundName: Click
 --- !u!114 &246306688 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5188770097992171488, guid: 3da62bb265d6f9a4187bbc1372c1b549,
@@ -809,6 +839,7 @@ GameObject:
   - component: {fileID: 284773943}
   - component: {fileID: 284773942}
   - component: {fileID: 284773945}
+  - component: {fileID: 284773946}
   m_Layer: 5
   m_Name: Level 5
   m_TagString: Untagged
@@ -951,6 +982,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &284773946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 284773940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01eb443e9b40dc946bfdf491da8ec706, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoveringSoundName: Button Hovering
+  clickSoundName: Click
 --- !u!1 &317770615
 GameObject:
   m_ObjectHideFlags: 0
@@ -1622,6 +1667,7 @@ GameObject:
   - component: {fileID: 976987634}
   - component: {fileID: 976987633}
   - component: {fileID: 976987636}
+  - component: {fileID: 976987637}
   m_Layer: 5
   m_Name: Level 3
   m_TagString: Untagged
@@ -1764,6 +1810,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &976987637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976987631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01eb443e9b40dc946bfdf491da8ec706, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoveringSoundName: Button Hovering
+  clickSoundName: Click
 --- !u!1 &1041246978
 GameObject:
   m_ObjectHideFlags: 0
@@ -2418,6 +2478,7 @@ GameObject:
   - component: {fileID: 1560107370}
   - component: {fileID: 1560107369}
   - component: {fileID: 1560107372}
+  - component: {fileID: 1560107373}
   m_Layer: 5
   m_Name: Level 2
   m_TagString: Untagged
@@ -2560,6 +2621,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1560107373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560107367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01eb443e9b40dc946bfdf491da8ec706, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoveringSoundName: Button Hovering
+  clickSoundName: Click
 --- !u!1 &1625768922
 GameObject:
   m_ObjectHideFlags: 0
@@ -3060,6 +3135,7 @@ GameObject:
   - component: {fileID: 2088446404}
   - component: {fileID: 2088446403}
   - component: {fileID: 2088446406}
+  - component: {fileID: 2088446407}
   m_Layer: 5
   m_Name: Level 4
   m_TagString: Untagged
@@ -3202,6 +3278,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2088446407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088446401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01eb443e9b40dc946bfdf491da8ec706, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoveringSoundName: Button Hovering
+  clickSoundName: Click
 --- !u!1001 &8325192146003718522
 PrefabInstance:
   m_ObjectHideFlags: 0

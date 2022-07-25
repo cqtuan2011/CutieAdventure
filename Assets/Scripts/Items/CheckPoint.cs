@@ -23,13 +23,17 @@ public class CheckPoint : MonoBehaviour
                 case CheckPointType.StartPoint:
                     break;
                 case CheckPointType.EndPoint:
+
+                    AudioManager.Instance.PlayUIEffectSound("Win");
+
                     UIManager.Instance.Invoke("OpenWinMenu", 0.5f);
 
                     var newData = new LevelData();
                     newData.levelIndex = int.Parse(SceneLoader.Instance.GetSceneName());
                     newData.colectedStars = StarManager.Instance.starAmount;
-                    
+
                     LevelManager.Instance.UpdateLevelData(newData);
+
                     break;
             }
         }

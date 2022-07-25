@@ -51,7 +51,7 @@ public class HealthManager : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            UIManager.Instance.Invoke("OpenLoseMenu", 0.5f);
+            UIManager.Instance.Invoke("OpenLoseMenu", 2f);
         }
     }
 

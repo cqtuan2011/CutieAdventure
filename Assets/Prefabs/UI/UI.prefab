@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 7767162479649117950}
   - component: {fileID: 7767162479649117949}
   - component: {fileID: 7767162479649117948}
+  - component: {fileID: 678827254915114904}
   m_Layer: 5
   m_Name: Quit Button
   m_TagString: Untagged
@@ -232,6 +233,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &678827254915114904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7767162479649117946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01eb443e9b40dc946bfdf491da8ec706, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoveringSoundName: Button Hovering
+  clickSoundName: Click
 --- !u!1 &7767162479675786477
 GameObject:
   m_ObjectHideFlags: 0
@@ -244,6 +259,7 @@ GameObject:
   - component: {fileID: 7767162479675786449}
   - component: {fileID: 7767162479675786448}
   - component: {fileID: 7767162479675786479}
+  - component: {fileID: 7226140240749750566}
   m_Layer: 5
   m_Name: Restart Button
   m_TagString: Untagged
@@ -367,6 +383,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &7226140240749750566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7767162479675786477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01eb443e9b40dc946bfdf491da8ec706, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoveringSoundName: Button Hovering
+  clickSoundName: Click
 --- !u!1 &7767162479692535146
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,6 +485,7 @@ GameObject:
   - component: {fileID: 7767162479760761250}
   - component: {fileID: 7767162479760761249}
   - component: {fileID: 7767162479760761248}
+  - component: {fileID: 8664724879083749937}
   m_Layer: 5
   m_Name: Menu Button
   m_TagString: Untagged
@@ -578,6 +609,20 @@ MonoBehaviour:
           m_StringArgument: Main Menu
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &8664724879083749937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7767162479760761278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01eb443e9b40dc946bfdf491da8ec706, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoveringSoundName: Button Hovering
+  clickSoundName: Click
 --- !u!1 &7767162479782283169
 GameObject:
   m_ObjectHideFlags: 0
@@ -834,6 +879,7 @@ GameObject:
   - component: {fileID: 7767162479795274898}
   - component: {fileID: 7767162479795274897}
   - component: {fileID: 7767162479795274896}
+  - component: {fileID: 928266809}
   m_Layer: 5
   m_Name: Restart Button
   m_TagString: Untagged
@@ -955,6 +1001,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &928266809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7767162479795274926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01eb443e9b40dc946bfdf491da8ec706, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoveringSoundName: Button Hovering
+  clickSoundName: Click
 --- !u!1 &7767162479802933991
 GameObject:
   m_ObjectHideFlags: 0
@@ -1338,6 +1398,7 @@ GameObject:
   - component: {fileID: 7767162479985297296}
   - component: {fileID: 7767162479985297327}
   - component: {fileID: 7767162479985297326}
+  - component: {fileID: 1721690489}
   m_Layer: 5
   m_Name: Level Menu Button
   m_TagString: Untagged
@@ -1459,6 +1520,20 @@ MonoBehaviour:
           m_StringArgument: Main Menu
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1721690489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7767162479985297324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01eb443e9b40dc946bfdf491da8ec706, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoveringSoundName: Button Hovering
+  clickSoundName: Click
 --- !u!1 &7767162480075325073
 GameObject:
   m_ObjectHideFlags: 0
@@ -1897,6 +1972,7 @@ GameObject:
   - component: {fileID: 7767162480440351041}
   - component: {fileID: 7767162480440351040}
   - component: {fileID: 7767162480440351071}
+  - component: {fileID: 928266810}
   m_Layer: 5
   m_Name: Next Button
   m_TagString: Untagged
@@ -2018,6 +2094,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &928266810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7767162480440351069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01eb443e9b40dc946bfdf491da8ec706, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoveringSoundName: Button Hovering
+  clickSoundName: Click
 --- !u!1 &7767162480583435744
 GameObject:
   m_ObjectHideFlags: 0
@@ -2106,6 +2196,7 @@ GameObject:
   - component: {fileID: 7767162480742238589}
   - component: {fileID: 7767162480742238588}
   - component: {fileID: 7767162480742238587}
+  - component: {fileID: 1721690490}
   m_Layer: 5
   m_Name: Restart Button
   m_TagString: Untagged
@@ -2227,6 +2318,20 @@ MonoBehaviour:
           m_StringArgument: Main Menu
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1721690490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7767162480742238585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01eb443e9b40dc946bfdf491da8ec706, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoveringSoundName: Button Hovering
+  clickSoundName: Click
 --- !u!1 &7767162480746872507
 GameObject:
   m_ObjectHideFlags: 0
@@ -2239,6 +2344,7 @@ GameObject:
   - component: {fileID: 7767162480746872511}
   - component: {fileID: 7767162480746872510}
   - component: {fileID: 7767162480746872509}
+  - component: {fileID: 928266808}
   m_Layer: 5
   m_Name: Level Menu Button
   m_TagString: Untagged
@@ -2360,6 +2466,20 @@ MonoBehaviour:
           m_StringArgument: Level Select
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &928266808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7767162480746872507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01eb443e9b40dc946bfdf491da8ec706, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoveringSoundName: Button Hovering
+  clickSoundName: Click
 --- !u!1 &7767162480822099159
 GameObject:
   m_ObjectHideFlags: 0
@@ -4895,3 +5015,43 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 465821741863175215}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2796729486794661346 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2357938701032036813, guid: 8c8b7d93d0c4e664e9eab96f30781abc,
+    type: 3}
+  m_PrefabInstance: {fileID: 465821741863175215}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &9221273104656485896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2796729486794661346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01eb443e9b40dc946bfdf491da8ec706, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoveringSoundName: Button Hovering
+  clickSoundName: Click
+--- !u!1 &2796729488304582427 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2357938699589233460, guid: 8c8b7d93d0c4e664e9eab96f30781abc,
+    type: 3}
+  m_PrefabInstance: {fileID: 465821741863175215}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3739814381834823258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2796729488304582427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01eb443e9b40dc946bfdf491da8ec706, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoveringSoundName: Button Hovering
+  clickSoundName: Click

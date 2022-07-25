@@ -18,6 +18,7 @@ public class Trampoline : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             anim.Play("Push");
+            AudioManager.Instance.PlayEffectSound("Trampoline");
             var playerRb = collision.gameObject.GetComponent<Rigidbody2D>();
 
             playerRb.AddForce(new Vector2(0, force), ForceMode2D.Impulse);

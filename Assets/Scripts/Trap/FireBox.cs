@@ -31,6 +31,7 @@ public class FireBox : MonoBehaviour
     {
         if (canHit && collision.gameObject.CompareTag("Player"))
         {
+            AudioManager.Instance.PlayUIEffectSound("FireBox");
             anim.SetTrigger("IsHit");
             canHit = false;
         }

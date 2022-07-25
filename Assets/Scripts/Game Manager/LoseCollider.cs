@@ -8,7 +8,8 @@ public class LoseCollider : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             HealthManager.Instance.currentHealth = 0;
-            UIManager.Instance.Invoke("OpenLoseMenu", 0.5f);
+            AudioManager.Instance.PlayUIEffectSound("GameOver");
+            UIManager.Instance.Invoke("OpenLoseMenu", 2f);
         }
     }
 

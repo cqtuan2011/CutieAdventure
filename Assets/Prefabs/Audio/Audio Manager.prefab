@@ -314,11 +314,11 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 3dabf76daefc4d242b85311ca7755976, type: 3}
     volume: 0.15
   - name: Button Hovering
-    clip: {fileID: 8300000, guid: 574ea83e9ea997f48aa9f4b4adf3bfea, type: 3}
-    volume: 0.1
+    clip: {fileID: 8300000, guid: b401c7d24998d8442b6d29afdd7b4d7b, type: 3}
+    volume: 0.05
   - name: Click
     clip: {fileID: 8300000, guid: f36b21b23f8dfb3459f568a0f484d22f, type: 3}
-    volume: 0.5
+    volume: 0.8
   - name: Jump
     clip: {fileID: 8300000, guid: 5a2df5b2115cd73498584fff297e489e, type: 3}
     volume: 0.5
@@ -333,6 +333,30 @@ MonoBehaviour:
     volume: 0.6
   - name: Hit
     clip: {fileID: 8300000, guid: 8ebe24abc1e913c4a88efc9bf2261fad, type: 3}
+    volume: 0.5
+  - name: UI_Pause
+    clip: {fileID: 8300000, guid: 894270ed064a1564194145a068f17dbf, type: 3}
+    volume: 1
+  - name: UI_Resume
+    clip: {fileID: 8300000, guid: e2f060aa9d709cc44886902ab271141f, type: 3}
+    volume: 1
+  - name: Trampoline
+    clip: {fileID: 8300000, guid: b4012d01c7ec2d9489a43d55cdcb7071, type: 3}
+    volume: 1
+  - name: Win
+    clip: {fileID: 8300000, guid: 15e80b069d40cba48954d5132c1493c7, type: 3}
+    volume: 0.8
+  - name: FireBox
+    clip: {fileID: 8300000, guid: d39405a0a8df91843b6ee5355812baaa, type: 3}
+    volume: 0.8
+  - name: GameOver
+    clip: {fileID: 8300000, guid: 1a3b40227cec9a04ead9769ebeac15d5, type: 3}
+    volume: 0.7
+  - name: Heal
+    clip: {fileID: 8300000, guid: f3658adfcc3548643a981a51f8460c1a, type: 3}
+    volume: 0.7
+  - name: CrateBreak
+    clip: {fileID: 8300000, guid: 32a60490a6bba8947a0376f598a3524a, type: 3}
     volume: 0.5
   bgms:
   - {fileID: 8300000, guid: 1f2ad53bacc245642854dbdc8ea71a9b, type: 3}

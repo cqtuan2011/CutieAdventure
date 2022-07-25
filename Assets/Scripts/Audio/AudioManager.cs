@@ -28,6 +28,13 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        uiSource.volume = PlayerPrefs.GetFloat("SoundVolume");
+        effectSource.volume = PlayerPrefs.GetFloat("SoundVolume");
+        musicSource.volume = PlayerPrefs.GetFloat("MusicVolume");
+    }
+
     private void OnSceneLoaded(Scene scene, LoadSceneMode sceneMode)
     {
         AudioSource source = gameObject.AddComponent<AudioSource>();

@@ -9,7 +9,6 @@ public class PlayerController : MonoBehaviour
     [Header("Camera")]
     [SerializeField] CinemachineVirtualCamera cinemachineVirtualCamera;
 
-
     [Header("For Movement")]
     [SerializeField] private float movementSpeed;
     private float movementInputDirection;
@@ -17,7 +16,6 @@ public class PlayerController : MonoBehaviour
     private bool isRunning;
 
     [Space(10)]
-
 
     [Header("For Jumping")]
     [SerializeField] private int amountOfJump = 1;
@@ -178,7 +176,7 @@ public class PlayerController : MonoBehaviour
     {
         if (canJump)
         {
-            AudioManager.Instance.PlayEffectSound("Jump");
+            AudioManager.Instance.PlayEffectSound("Jump"); 
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
 
             if (amountOfJumpLeft == 1)
@@ -193,15 +191,6 @@ public class PlayerController : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, wallJumpForce);
             AudioManager.Instance.PlayEffectSound("Jump");
-
-            //if (movementInputDirection == 0)
-            //{
-            //    rb.AddForce(new Vector2(-wallJumpDirection * wallBounceForce * xPushIndex, yPushIndex));
-            //}
-            //else
-            //{
-            //    rb.AddForce(new Vector2(-movementInputDirection * wallBounceForce * xPushIndex, yPushIndex));
-            //}
         } 
     }
 
@@ -223,7 +212,6 @@ public class PlayerController : MonoBehaviour
     {
         if (!isWallSliding)
         {
-            //wallJumpDirection *= -1;
             isFacingRight = !isFacingRight;
             transform.Rotate(0.0f, 180.0f, 0.0f);
         }

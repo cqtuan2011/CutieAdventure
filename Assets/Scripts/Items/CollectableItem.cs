@@ -34,7 +34,7 @@ public class CollectableItem : MonoBehaviour
                     AudioManager.Instance.PlayEffectSound("Pick Star");
                     break;
             }
-
+            GetComponent<CircleCollider2D>().enabled = false; // fix double collection in one collision
         }
     }
 

@@ -5,13 +5,14 @@ using UnityEngine;
 
 public class RockHead : MonoBehaviour
 {
-    [HideInInspector] public bool leftWallChecked;
-    [HideInInspector] public bool rightWallChecked;
+    public RockHeadType type;
 
     [SerializeField] private float wallCheckDistance;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private Transform leftWallPoint;
     [SerializeField] private Transform rightWallPoint;
+    [SerializeField] private Transform topWallPoint;
+    [SerializeField] private Transform bottomWallPoint;
 
     private Animator anim;
 
@@ -20,27 +21,34 @@ public class RockHead : MonoBehaviour
         anim = GetComponent<Animator>();   
     }
 
-    private void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        WallCheckHit();
-        UpdateAnimation();
+        if (collision.CompareTag("RockHead"))
+        {
+            switch (type)
+            {
+                case RockHeadType.Horizontal:
+                    if (collision.gameObject.name == "Waypoint 1")
+                    {
+                        anim.Play("Left Hit");
+                    }
+                    else anim.Play("Right Hit");
+                    break;
+
+                case RockHeadType.Vertical:
+                    if (collision.gameObject.name == "Waypoint 1")
+                    {
+                        anim.Play("TopHit");
+                    }
+                    else anim.Play("BottomHit");
+                    break;
+            }
+        }
     }
 
-    private void UpdateAnimation()
+    public enum RockHeadType
     {
-        anim.SetBool("leftHit", leftWallChecked);
-        anim.SetBool("rightHit", rightWallChecked);
-    }
-
-    public void WallCheckHit()
-    {
-        leftWallChecked = Physics2D.Raycast(leftWallPoint.position, Vector2.left, wallCheckDistance, groundLayer);
-        rightWallChecked = Physics2D.Raycast(rightWallPoint.position, Vector2.right, wallCheckDistance, groundLayer);
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawLine(leftWallPoint.position, new Vector3(leftWallPoint.position.x - wallCheckDistance, leftWallPoint.position.y, leftWallPoint.position.z));
-        Gizmos.DrawLine(rightWallPoint.position, new Vector3(rightWallPoint.position.x + wallCheckDistance, rightWallPoint.position.y, rightWallPoint.position.z));
+        Horizontal,
+        Vertical,
     }
 }

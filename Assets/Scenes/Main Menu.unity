@@ -2184,20 +2184,40 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6882260824512878229, guid: d6993ce345e3f704a9ddae5aad0b0ca6,
+    - target: {fileID: 6882260824823459912, guid: d6993ce345e3f704a9ddae5aad0b0ca6,
         type: 3}
-      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6882260824684389583, guid: d6993ce345e3f704a9ddae5aad0b0ca6,
-        type: 3}
-      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
-      value: 0
+      propertyPath: audios.Array.size
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 6882260824823459912, guid: d6993ce345e3f704a9ddae5aad0b0ca6,
         type: 3}
-      propertyPath: audios.Array.data[1].volume
-      value: 0.15
+      propertyPath: audios.Array.data[9].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 894270ed064a1564194145a068f17dbf, type: 3}
+    - target: {fileID: 6882260824823459912, guid: d6993ce345e3f704a9ddae5aad0b0ca6,
+        type: 3}
+      propertyPath: audios.Array.data[9].name
+      value: UI_Pause
+      objectReference: {fileID: 0}
+    - target: {fileID: 6882260824823459912, guid: d6993ce345e3f704a9ddae5aad0b0ca6,
+        type: 3}
+      propertyPath: audios.Array.data[10].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: e2f060aa9d709cc44886902ab271141f, type: 3}
+    - target: {fileID: 6882260824823459912, guid: d6993ce345e3f704a9ddae5aad0b0ca6,
+        type: 3}
+      propertyPath: audios.Array.data[10].name
+      value: UI_Resume
+      objectReference: {fileID: 0}
+    - target: {fileID: 6882260824823459912, guid: d6993ce345e3f704a9ddae5aad0b0ca6,
+        type: 3}
+      propertyPath: audios.Array.data[9].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6882260824823459912, guid: d6993ce345e3f704a9ddae5aad0b0ca6,
+        type: 3}
+      propertyPath: audios.Array.data[10].volume
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6882260824823459913, guid: d6993ce345e3f704a9ddae5aad0b0ca6,
         type: 3}

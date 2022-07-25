@@ -88,7 +88,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -311,8 +311,8 @@ MonoBehaviour:
     clip: {fileID: 0}
     volume: 0
   - name: Background Music
-    clip: {fileID: 8300000, guid: 35967e8a4dfb1664e9b066939272c0a4, type: 3}
-    volume: 0.3
+    clip: {fileID: 8300000, guid: 3dabf76daefc4d242b85311ca7755976, type: 3}
+    volume: 0.15
   - name: Button Hovering
     clip: {fileID: 8300000, guid: 574ea83e9ea997f48aa9f4b4adf3bfea, type: 3}
     volume: 0.1
@@ -334,6 +334,13 @@ MonoBehaviour:
   - name: Hit
     clip: {fileID: 8300000, guid: 8ebe24abc1e913c4a88efc9bf2261fad, type: 3}
     volume: 0.5
+  bgms:
+  - {fileID: 8300000, guid: 1f2ad53bacc245642854dbdc8ea71a9b, type: 3}
+  - {fileID: 8300000, guid: 35967e8a4dfb1664e9b066939272c0a4, type: 3}
+  - {fileID: 8300000, guid: bef0cef2ded0f0645ad90c6e5bdd4965, type: 3}
+  - {fileID: 8300000, guid: 89f935015cc98724a862a586326fdf21, type: 3}
+  - {fileID: 8300000, guid: 033766cc31c97904bae4404b8a079544, type: 3}
+  - {fileID: 8300000, guid: 3dabf76daefc4d242b85311ca7755976, type: 3}
 --- !u!1 &6882260826336028726
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
@@ -10,10 +12,7 @@ public class AudioManager : MonoBehaviour
 
     [SerializeField] private List<Audio> audios;
 
-    private void Start()
-    {
-        PlayMusic("Background Music");
-    }
+    [SerializeField] private AudioClip[] bgms;
 
     private void Awake()
     {
@@ -21,9 +20,47 @@ public class AudioManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(this.gameObject);
+            SceneManager.sceneLoaded += OnSceneLoaded;
+
         } else
         {
-            Destroy(gameObject);
+            Destroy(this.gameObject);
+        }
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode sceneMode)
+    {
+        AudioSource source = gameObject.AddComponent<AudioSource>();
+
+        source.playOnAwake = false;
+
+        switch (scene.name)
+        {
+            case "1":
+                source.clip = bgms[0];
+                break;
+            case "2":
+                source.clip = bgms[1];
+                break;
+            case "3":
+                source.clip = bgms[2];
+                break;
+            case "4":
+                source.clip = bgms[3];
+                break;
+            case "5":
+                source.clip = bgms[4];
+                break;
+            default:
+                source.clip = bgms[5];
+                break;
+        }
+
+        if (source.clip != musicSource.clip)
+        {
+            musicSource.enabled = false;
+            musicSource.clip = source.clip;
+            musicSource.enabled = true;
         }
     }
 
@@ -70,8 +107,6 @@ public class AudioManager : MonoBehaviour
 
     public void ToggleSound()
     {
-        //effectSource.mute = !effectSource.mute;
-        //uiSource.mute = !uiSource.mute;
         if (effectSource.volume > 0 && uiSource.volume > 0)
         {
             effectSource.volume = 0;
@@ -87,8 +122,6 @@ public class AudioManager : MonoBehaviour
 
     public void ToggleMusic()
     {
-        //musicSource.mute = !musicSource.mute;
-
         if (musicSource.volume > 0)
         {
             musicSource.volume = 0;

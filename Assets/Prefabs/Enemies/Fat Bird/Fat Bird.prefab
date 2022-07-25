@@ -4838,7 +4838,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -902242581
-  m_SortingLayer: 5
+  m_SortingLayer: 7
   m_SortingOrder: 1
   m_RenderMode: 0
   m_MeshDistribution: 0
@@ -4894,7 +4894,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9184124278136535767}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.12, z: 0}
+  m_LocalPosition: {x: -0.73, y: 2.22, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4967,7 +4967,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9184124279438401799}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.26, z: 0}
+  m_LocalPosition: {x: -0.73, y: 1.26, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5015,7 +5015,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -902242581
-  m_SortingLayer: 5
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: -8116256361858104333, guid: 60beccb521110cf40be533c702156072,
     type: 3}
@@ -5120,6 +5120,7 @@ MonoBehaviour:
   - {fileID: 9184124279599757242}
   enemyModeFlip: 0
   trapModePatroll: 0
+  randomWaypointIndex: 0
   waitTime: 1
 --- !u!114 &9184124279438401818
 MonoBehaviour:
@@ -5133,8 +5134,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d390fdb89c3995748ac5c153130abe2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectorSize: {x: 1.63, y: 5.66, z: 0}
-  positionOffset: {x: 0, y: -3.79, z: 0}
+  detectorSize: {x: 1.63, y: 9.2, z: 0}
+  positionOffset: {x: 0, y: -5.46, z: 0}
   playerLayer:
     serializedVersion: 2
     m_Bits: 512
@@ -5154,7 +5155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d42e73218eb1c7f4392d9676dc909ef2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallingSpeed: 10
+  fallingSpeed: 15
   resetPosSpeed: 1.5
   groundWaitTime: 1
   slamDustPS: {fileID: 9184124277895948818}
@@ -5204,7 +5205,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9184124279599757242}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.6, z: 0}
+  m_LocalPosition: {x: -0.73, y: -0.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

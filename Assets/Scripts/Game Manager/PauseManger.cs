@@ -23,6 +23,7 @@ public class PauseManger : MonoBehaviour
 
     private void PauseGame()
     {
+        AudioManager.Instance.PlayUIEffectSound("UI_Pause");
         Time.timeScale = 0f;
         pauseMenu.SetActive(true);
     }
@@ -31,6 +32,7 @@ public class PauseManger : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape) && Time.timeScale == 0)
         {
+            AudioManager.Instance.PlayUIEffectSound("UI_Resume");
             pauseMenu.SetActive(false);
             Time.timeScale = 1f;
         }

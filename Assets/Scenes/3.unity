@@ -29578,6 +29578,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire Box
       objectReference: {fileID: 0}
+    - target: {fileID: 2456110880999988021, guid: 99bce2e806a72fe46925ea1afdeff8ee,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1224963569}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99bce2e806a72fe46925ea1afdeff8ee, type: 3}
 --- !u!4 &697490669 stripped
@@ -36071,6 +36076,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 7767162479913908127, guid: e27ae90cfd2747b49a2bfad6fff85043,
+        type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7767162479985297326, guid: e27ae90cfd2747b49a2bfad6fff85043,
         type: 3}
@@ -64291,6 +64301,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire Box (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2456110880999988021, guid: 99bce2e806a72fe46925ea1afdeff8ee,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1224963569}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99bce2e806a72fe46925ea1afdeff8ee, type: 3}
 --- !u!4 &1335999612 stripped
@@ -65297,6 +65312,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire Box (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2456110880999988021, guid: 99bce2e806a72fe46925ea1afdeff8ee,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1224963569}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99bce2e806a72fe46925ea1afdeff8ee, type: 3}
 --- !u!4 &1488176907 stripped
@@ -65631,6 +65651,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire Box (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2456110880999988021, guid: 99bce2e806a72fe46925ea1afdeff8ee,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1224963569}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99bce2e806a72fe46925ea1afdeff8ee, type: 3}
 --- !u!4 &1509186047 stripped

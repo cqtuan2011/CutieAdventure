@@ -22904,6 +22904,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 7767162479913908127, guid: e27ae90cfd2747b49a2bfad6fff85043,
+        type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7767162479985297326, guid: e27ae90cfd2747b49a2bfad6fff85043,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

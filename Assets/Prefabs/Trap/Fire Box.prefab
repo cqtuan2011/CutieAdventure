@@ -221,6 +221,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a2f3adf0988d35448e3b9f47c015a32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireTime: 3
-  delayBeforeFire: 2
+  fireTime: 4
+  delayBeforeFire: 1
   player: {fileID: 0}

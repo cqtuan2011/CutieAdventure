@@ -427,7 +427,7 @@ MonoBehaviour:
   - {fileID: 4621408480164891797}
   enemyModeFlip: 0
   trapModePatroll: 1
-  randomWaypointIndex: 0
+  randomWaypointIndex: 1
   waitTime: 0.8
 --- !u!50 &781361124
 Rigidbody2D:
@@ -448,7 +448,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 5
 --- !u!1 &4621408481326784528
 GameObject:

@@ -48,6 +48,7 @@ public class LevelManager : MonoBehaviour
 
         var json = JsonConvert.SerializeObject(levelDataList);
         
+
         PlayerPrefs.SetString("LevelData", json);
     }
 }

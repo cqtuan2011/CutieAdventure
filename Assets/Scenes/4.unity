@@ -32557,6 +32557,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: RockHead_Horizontal
       objectReference: {fileID: 0}
+    - target: {fileID: 5539557528228824459, guid: bf7a6dfaab0e01b4fbe2908abedcc7a8,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 5539557528427102724, guid: bf7a6dfaab0e01b4fbe2908abedcc7a8,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.36
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf7a6dfaab0e01b4fbe2908abedcc7a8, type: 3}
 --- !u!4 &110017018 stripped
